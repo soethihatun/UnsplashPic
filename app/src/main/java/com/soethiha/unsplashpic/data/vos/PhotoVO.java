@@ -12,39 +12,51 @@ public class PhotoVO {
     @SerializedName("id")
     @Expose
     private String id;
+
     @SerializedName("created_at")
     @Expose
     private String createdAt;
+
     @SerializedName("updated_at")
     @Expose
     private String updatedAt;
+
     @SerializedName("width")
     @Expose
     private int width;
+
     @SerializedName("height")
     @Expose
     private int height;
+
     @SerializedName("color")
     @Expose
     private String color;
+
     @SerializedName("likes")
     @Expose
     private int likes;
+
     @SerializedName("liked_by_user")
     @Expose
     private boolean likedByUser;
+
     @SerializedName("description")
     @Expose
     private String description;
+
     @SerializedName("user")
     @Expose
     private User user;
+
     @SerializedName("current_user_collections")
     @Expose
     private List<CurrentUserCollection> currentUserCollections = null;
+
     @SerializedName("urls")
     @Expose
     private Urls urls;
+
     @SerializedName("links")
     @Expose
     private Links______ links;

@@ -1,5 +1,5 @@
 
-package com.soethiha.unsplashpic.data.vos; ;
+package com.soethiha.unsplashpic.data.vos;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

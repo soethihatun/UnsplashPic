@@ -1,43 +1,53 @@
 
-package com.soethiha.unsplashpic.data.vos; import com.google.gson.annotations.Expose;
+package com.soethiha.unsplashpic.data.vos;
+
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
-
-;
 
 public class CoverPhoto {
 
     @SerializedName("id")
     @Expose
     private String id;
+
     @SerializedName("width")
     @Expose
     private int width;
+
     @SerializedName("height")
     @Expose
     private int height;
+
     @SerializedName("color")
     @Expose
     private String color;
+
     @SerializedName("likes")
     @Expose
     private int likes;
+
     @SerializedName("liked_by_user")
     @Expose
     private boolean likedByUser;
+
     @SerializedName("description")
     @Expose
     private String description;
+
     @SerializedName("user")
     @Expose
     private User_ user;
+
     @SerializedName("urls")
     @Expose
     private Urls urls;
+
     @SerializedName("categories")
     @Expose
     private List<Category> categories = null;
+
     @SerializedName("links")
     @Expose
     private Links___ links;

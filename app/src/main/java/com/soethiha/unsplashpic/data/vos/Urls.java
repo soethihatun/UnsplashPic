@@ -9,15 +9,19 @@ public class Urls {
     @SerializedName("raw")
     @Expose
     private String raw;
+
     @SerializedName("full")
     @Expose
     private String full;
+
     @SerializedName("regular")
     @Expose
     private String regular;
+
     @SerializedName("small")
     @Expose
     private String small;
+
     @SerializedName("thumb")
     @Expose
     private String thumb;

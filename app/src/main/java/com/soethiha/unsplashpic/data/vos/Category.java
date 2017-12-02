@@ -1,5 +1,5 @@
 
-package com.soethiha.unsplashpic.data.vos; ;
+package com.soethiha.unsplashpic.data.vos;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -9,12 +9,15 @@ public class Category {
     @SerializedName("id")
     @Expose
     private int id;
+
     @SerializedName("title")
     @Expose
     private String title;
+
     @SerializedName("photo_count")
     @Expose
     private int photoCount;
+
     @SerializedName("links")
     @Expose
     private Links__ links;

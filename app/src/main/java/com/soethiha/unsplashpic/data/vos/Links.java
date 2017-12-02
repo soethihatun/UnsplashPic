@@ -9,15 +9,19 @@ public class Links {
     @SerializedName("self")
     @Expose
     private String self;
+
     @SerializedName("html")
     @Expose
     private String html;
+
     @SerializedName("photos")
     @Expose
     private String photos;
+
     @SerializedName("likes")
     @Expose
     private String likes;
+
     @SerializedName("portfolio")
     @Expose
     private String portfolio;

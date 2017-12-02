@@ -8,6 +8,8 @@ package com.soethiha.unsplashpic.utils;
  * @since 01/12/2017
  */
 
-public class UnsplashPicConstant {
+public final class UnsplashPicConstants {
 
+    private UnsplashPicConstants() {
+    }
 }

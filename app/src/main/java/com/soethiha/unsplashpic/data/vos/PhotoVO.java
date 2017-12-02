@@ -1,10 +1,11 @@
 
-package com.soethiha.unsplashpic.data.vos; import com.google.gson.annotations.Expose;
+package com.soethiha.unsplashpic.data.vos;
+
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-;
 
 public class PhotoVO {
 
@@ -43,7 +44,7 @@ public class PhotoVO {
     private List<CurrentUserCollection> currentUserCollections = null;
     @SerializedName("urls")
     @Expose
-    private Urls_ urls;
+    private Urls urls;
     @SerializedName("links")
     @Expose
     private Links______ links;
@@ -136,11 +137,11 @@ public class PhotoVO {
         this.currentUserCollections = currentUserCollections;
     }
 
-    public Urls_ getUrls() {
+    public Urls getUrls() {
         return urls;
     }
 
-    public void setUrls(Urls_ urls) {
+    public void setUrls(Urls urls) {
         this.urls = urls;
     }
 

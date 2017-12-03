@@ -9,12 +9,24 @@ public class User {
     @SerializedName("id")
     @Expose
     private String id;
+    @SerializedName("updated_at")
+    @Expose
+    private String updatedAt;
     @SerializedName("username")
     @Expose
     private String username;
     @SerializedName("name")
     @Expose
     private String name;
+    @SerializedName("first_name")
+    @Expose
+    private String firstName;
+    @SerializedName("last_name")
+    @Expose
+    private String lastName;
+    @SerializedName("twitter_username")
+    @Expose
+    private String twitterUsername;
     @SerializedName("portfolio_url")
     @Expose
     private String portfolioUrl;
@@ -48,6 +60,14 @@ public class User {
         this.id = id;
     }
 
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
     public String getUsername() {
         return username;
     }
@@ -62,6 +82,30 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getTwitterUsername() {
+        return twitterUsername;
+    }
+
+    public void setTwitterUsername(String twitterUsername) {
+        this.twitterUsername = twitterUsername;
     }
 
     public String getPortfolioUrl() {
@@ -132,8 +176,12 @@ public class User {
     public String toString() {
         return "User{" +
                 "id='" + id + '\'' +
+                ", updatedAt='" + updatedAt + '\'' +
                 ", username='" + username + '\'' +
                 ", name='" + name + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", twitterUsername='" + twitterUsername + '\'' +
                 ", portfolioUrl='" + portfolioUrl + '\'' +
                 ", bio='" + bio + '\'' +
                 ", location='" + location + '\'' +

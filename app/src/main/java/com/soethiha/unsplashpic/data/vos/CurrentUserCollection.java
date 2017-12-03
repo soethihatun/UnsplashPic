@@ -32,11 +32,11 @@ public class CurrentUserCollection {
 
     @SerializedName("user")
     @Expose
-    private User__ user;
+    private User user;
 
     @SerializedName("links")
     @Expose
-    private Links_____ links;
+    private Links links;
 
     public int getId() {
         return id;
@@ -86,19 +86,19 @@ public class CurrentUserCollection {
         this.coverPhoto = coverPhoto;
     }
 
-    public User__ getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(User__ user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
-    public Links_____ getLinks() {
+    public Links getLinks() {
         return links;
     }
 
-    public void setLinks(Links_____ links) {
+    public void setLinks(Links links) {
         this.links = links;
     }
 

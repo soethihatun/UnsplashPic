@@ -38,7 +38,7 @@ public class CoverPhoto {
 
     @SerializedName("user")
     @Expose
-    private User_ user;
+    private User user;
 
     @SerializedName("urls")
     @Expose
@@ -50,7 +50,7 @@ public class CoverPhoto {
 
     @SerializedName("links")
     @Expose
-    private Links___ links;
+    private Links links;
 
     public String getId() {
         return id;
@@ -108,11 +108,11 @@ public class CoverPhoto {
         this.description = description;
     }
 
-    public User_ getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(User_ user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
@@ -132,11 +132,11 @@ public class CoverPhoto {
         this.categories = categories;
     }
 
-    public Links___ getLinks() {
+    public Links getLinks() {
         return links;
     }
 
-    public void setLinks(Links___ links) {
+    public void setLinks(Links links) {
         this.links = links;
     }
 

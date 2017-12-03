@@ -59,7 +59,7 @@ public class PhotoVO {
 
     @SerializedName("links")
     @Expose
-    private Links______ links;
+    private Links links;
 
     public String getId() {
         return id;
@@ -157,11 +157,11 @@ public class PhotoVO {
         this.urls = urls;
     }
 
-    public Links______ getLinks() {
+    public Links getLinks() {
         return links;
     }
 
-    public void setLinks(Links______ links) {
+    public void setLinks(Links links) {
         this.links = links;
     }
 

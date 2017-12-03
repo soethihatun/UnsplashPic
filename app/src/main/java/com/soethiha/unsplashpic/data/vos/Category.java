@@ -20,7 +20,7 @@ public class Category {
 
     @SerializedName("links")
     @Expose
-    private Links__ links;
+    private Links links;
 
     public int getId() {
         return id;
@@ -46,11 +46,11 @@ public class Category {
         this.photoCount = photoCount;
     }
 
-    public Links__ getLinks() {
+    public Links getLinks() {
         return links;
     }
 
-    public void setLinks(Links__ links) {
+    public void setLinks(Links links) {
         this.links = links;
     }
 

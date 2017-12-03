@@ -1,10 +1,22 @@
 package com.soethiha.unsplashpic.network.agents;
 
 import android.content.Context;
+import android.os.AsyncTask;
+import android.util.Log;
 
+import com.soethiha.unsplashpic.data.models.PhotoModel;
+import com.soethiha.unsplashpic.data.vos.PhotoVO;
+import com.soethiha.unsplashpic.network.utils.NetworkConstants;
+
+import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
+import static com.soethiha.unsplashpic.UnsplashPicApp.TAG;
 
 /**
  * UnsplashPic
@@ -40,6 +52,43 @@ public class OkHttpDataAgent implements UnsplashPicDataAgent {
 
     @Override
     public void loadPhotos(Context context) {
+        new AsyncTask<Void, Void, List<PhotoVO>>() {
+            @Override
+            protected List<PhotoVO> doInBackground(Void... voids) {
+                Request request = new Request.Builder()
+                        .url(NetworkConstants.UNSPLASH_API_BASE_URL)
+                        .build();
 
+                try {
+                    Response response = okHttpClient.newCall(request).execute();
+                    if (response.isSuccessful()) {
+                        if (response.body() != null) {
+                            String responseString = response.body().string();
+                            Log.d(TAG, "doInBackground: " + responseString);
+//                            PCListResponse pcListResponse = new Gson().fromJson(responseString, PCListResponse.class);
+//                            return pcListResponse.getPCList();
+                            return null;
+                        }
+                    } else {
+                        PhotoModel.getObjInstance().notifyErrorInLoadingPhotos(response.message());
+                    }
+                } catch (IOException ioe) {
+                    Log.e(TAG, ioe.getMessage());
+                    PhotoModel.getObjInstance().notifyErrorInLoadingPhotos(ioe.getMessage());
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(List<PhotoVO> photoList) {
+                super.onPostExecute(photoList);
+                if (photoList != null && photoList.size() > 0) {
+                    Log.d(TAG, "onPostExecute: photoList.size() = " + photoList.size());
+                    PhotoModel.getObjInstance().notifyPhotosLoaded(photoList);
+                } else {
+
+                }
+            }
+        }.execute();
     }
 }

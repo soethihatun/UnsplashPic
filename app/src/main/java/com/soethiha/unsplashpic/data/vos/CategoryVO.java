@@ -4,7 +4,7 @@ package com.soethiha.unsplashpic.data.vos;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Category {
+public class CategoryVO {
 
     @SerializedName("id")
     @Expose
@@ -20,7 +20,7 @@ public class Category {
 
     @SerializedName("links")
     @Expose
-    private Links links;
+    private LinksVO links;
 
     public int getId() {
         return id;
@@ -46,17 +46,17 @@ public class Category {
         this.photoCount = photoCount;
     }
 
-    public Links getLinks() {
+    public LinksVO getLinks() {
         return links;
     }
 
-    public void setLinks(Links links) {
+    public void setLinks(LinksVO links) {
         this.links = links;
     }
 
     @Override
     public String toString() {
-        return "Category{" +
+        return "CategoryVO{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", photoCount=" + photoCount +

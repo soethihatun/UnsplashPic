@@ -47,19 +47,19 @@ public class PhotoVO {
 
     @SerializedName("user")
     @Expose
-    private User user;
+    private UserVO user;
 
     @SerializedName("current_user_collections")
     @Expose
-    private List<CurrentUserCollection> currentUserCollections = null;
+    private List<CurrentUserCollectionVO> currentUserCollections = null;
 
     @SerializedName("urls")
     @Expose
-    private Urls urls;
+    private UrlsVO urls;
 
     @SerializedName("links")
     @Expose
-    private Links links;
+    private LinksVO links;
 
     public String getId() {
         return id;
@@ -133,35 +133,35 @@ public class PhotoVO {
         this.description = description;
     }
 
-    public User getUser() {
+    public UserVO getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(UserVO user) {
         this.user = user;
     }
 
-    public List<CurrentUserCollection> getCurrentUserCollections() {
+    public List<CurrentUserCollectionVO> getCurrentUserCollections() {
         return currentUserCollections;
     }
 
-    public void setCurrentUserCollections(List<CurrentUserCollection> currentUserCollections) {
+    public void setCurrentUserCollections(List<CurrentUserCollectionVO> currentUserCollections) {
         this.currentUserCollections = currentUserCollections;
     }
 
-    public Urls getUrls() {
+    public UrlsVO getUrls() {
         return urls;
     }
 
-    public void setUrls(Urls urls) {
+    public void setUrls(UrlsVO urls) {
         this.urls = urls;
     }
 
-    public Links getLinks() {
+    public LinksVO getLinks() {
         return links;
     }
 
-    public void setLinks(Links links) {
+    public void setLinks(LinksVO links) {
         this.links = links;
     }
 

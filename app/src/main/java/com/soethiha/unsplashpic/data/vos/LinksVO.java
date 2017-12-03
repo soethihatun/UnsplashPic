@@ -4,7 +4,7 @@ package com.soethiha.unsplashpic.data.vos; ;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Links {
+public class LinksVO {
 
     @SerializedName("self")
     @Expose
@@ -92,7 +92,7 @@ public class Links {
 
     @Override
     public String toString() {
-        return "Links{" +
+        return "LinksVO{" +
                 "self='" + self + '\'' +
                 ", html='" + html + '\'' +
                 ", photos='" + photos + '\'' +

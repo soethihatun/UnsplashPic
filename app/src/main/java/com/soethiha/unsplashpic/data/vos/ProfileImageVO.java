@@ -4,7 +4,7 @@ package com.soethiha.unsplashpic.data.vos;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ProfileImage {
+public class ProfileImageVO {
 
     @SerializedName("small")
     @Expose
@@ -44,7 +44,7 @@ public class ProfileImage {
 
     @Override
     public String toString() {
-        return "ProfileImage{" +
+        return "ProfileImageVO{" +
                 "small='" + small + '\'' +
                 ", medium='" + medium + '\'' +
                 ", large='" + large + '\'' +

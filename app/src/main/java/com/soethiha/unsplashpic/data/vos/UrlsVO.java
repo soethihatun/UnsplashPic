@@ -4,7 +4,7 @@ package com.soethiha.unsplashpic.data.vos;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Urls {
+public class UrlsVO {
 
     @SerializedName("raw")
     @Expose
@@ -68,7 +68,7 @@ public class Urls {
 
     @Override
     public String toString() {
-        return "Urls{" +
+        return "UrlsVO{" +
                 "raw='" + raw + '\'' +
                 ", full='" + full + '\'' +
                 ", regular='" + regular + '\'' +

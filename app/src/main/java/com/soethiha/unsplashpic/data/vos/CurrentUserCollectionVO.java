@@ -4,7 +4,7 @@ package com.soethiha.unsplashpic.data.vos;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class CurrentUserCollection {
+public class CurrentUserCollectionVO {
 
     @SerializedName("id")
     @Expose
@@ -28,15 +28,15 @@ public class CurrentUserCollection {
 
     @SerializedName("cover_photo")
     @Expose
-    private CoverPhoto coverPhoto;
+    private CoverPhotoVO coverPhoto;
 
     @SerializedName("user")
     @Expose
-    private User user;
+    private UserVO user;
 
     @SerializedName("links")
     @Expose
-    private Links links;
+    private LinksVO links;
 
     public int getId() {
         return id;
@@ -78,33 +78,33 @@ public class CurrentUserCollection {
         this.curated = curated;
     }
 
-    public CoverPhoto getCoverPhoto() {
+    public CoverPhotoVO getCoverPhoto() {
         return coverPhoto;
     }
 
-    public void setCoverPhoto(CoverPhoto coverPhoto) {
+    public void setCoverPhoto(CoverPhotoVO coverPhoto) {
         this.coverPhoto = coverPhoto;
     }
 
-    public User getUser() {
+    public UserVO getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(UserVO user) {
         this.user = user;
     }
 
-    public Links getLinks() {
+    public LinksVO getLinks() {
         return links;
     }
 
-    public void setLinks(Links links) {
+    public void setLinks(LinksVO links) {
         this.links = links;
     }
 
     @Override
     public String toString() {
-        return "CurrentUserCollection{" +
+        return "CurrentUserCollectionVO{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", publishedAt='" + publishedAt + '\'' +

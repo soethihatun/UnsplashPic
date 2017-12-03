@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class CoverPhoto {
+public class CoverPhotoVO {
 
     @SerializedName("id")
     @Expose
@@ -38,19 +38,19 @@ public class CoverPhoto {
 
     @SerializedName("user")
     @Expose
-    private User user;
+    private UserVO user;
 
     @SerializedName("urls")
     @Expose
-    private Urls urls;
+    private UrlsVO urls;
 
     @SerializedName("categories")
     @Expose
-    private List<Category> categories = null;
+    private List<CategoryVO> categories = null;
 
     @SerializedName("links")
     @Expose
-    private Links links;
+    private LinksVO links;
 
     public String getId() {
         return id;
@@ -108,41 +108,41 @@ public class CoverPhoto {
         this.description = description;
     }
 
-    public User getUser() {
+    public UserVO getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(UserVO user) {
         this.user = user;
     }
 
-    public Urls getUrls() {
+    public UrlsVO getUrls() {
         return urls;
     }
 
-    public void setUrls(Urls urls) {
+    public void setUrls(UrlsVO urls) {
         this.urls = urls;
     }
 
-    public List<Category> getCategories() {
+    public List<CategoryVO> getCategories() {
         return categories;
     }
 
-    public void setCategories(List<Category> categories) {
+    public void setCategories(List<CategoryVO> categories) {
         this.categories = categories;
     }
 
-    public Links getLinks() {
+    public LinksVO getLinks() {
         return links;
     }
 
-    public void setLinks(Links links) {
+    public void setLinks(LinksVO links) {
         this.links = links;
     }
 
     @Override
     public String toString() {
-        return "CoverPhoto{" +
+        return "CoverPhotoVO{" +
                 "id='" + id + '\'' +
                 ", width=" + width +
                 ", height=" + height +

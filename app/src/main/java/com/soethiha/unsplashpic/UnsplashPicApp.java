@@ -1,8 +1,10 @@
 package com.soethiha.unsplashpic;
 
 import android.app.Application;
+import android.widget.Toast;
 
 import com.soethiha.unsplashpic.data.models.PhotoModel;
+import com.soethiha.unsplashpic.utils.NetworkUtility;
 
 /**
  * UnsplashPic
@@ -19,6 +21,10 @@ public class UnsplashPicApp extends Application {
     public void onCreate() {
         super.onCreate();
 
-        PhotoModel.getObjInstance().loadPhotos(getApplicationContext());
+        if (NetworkUtility.isOnline(getApplicationContext())) {
+            PhotoModel.getObjInstance().loadPhotos(getApplicationContext());
+        } else {
+            Toast.makeText(this, "Connection fail.", Toast.LENGTH_SHORT).show();
+        }
     }
 }

@@ -14,6 +14,7 @@ import com.soethiha.unsplashpic.adapters.PhotoAdapter;
 import com.soethiha.unsplashpic.data.models.PhotoModel;
 import com.soethiha.unsplashpic.data.vos.PhotoVO;
 import com.soethiha.unsplashpic.events.DataEvent;
+import com.soethiha.unsplashpic.utils.NetworkUtility;
 import com.soethiha.unsplashpic.views.holders.PhotoViewHolder;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -68,8 +69,13 @@ public class MainActivity extends BaseActivity implements PhotoViewHolder.Contro
     }
 
     private void refreshPhotoList() {
-        PhotoModel.getObjInstance().loadPhotos(getApplicationContext());
-        swipeRefreshLayout.setRefreshing(false);
+        if (NetworkUtility.isOnline(getApplicationContext())) {
+            PhotoModel.getObjInstance().loadPhotos(getApplicationContext());
+        } else {
+            // Stop loading
+            swipeRefreshLayout.setRefreshing(false);
+            Toast.makeText(this, "Connection fail.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
@@ -83,5 +89,8 @@ public class MainActivity extends BaseActivity implements PhotoViewHolder.Contro
         List<PhotoVO> newPhotoList = event.getPhotoList();
         Toast.makeText(getApplicationContext(), extraMessage + " : " + newPhotoList.size(), Toast.LENGTH_SHORT).show();
         mPhotoAdapter.setNewData(newPhotoList);
+
+        // Stop loading
+        swipeRefreshLayout.setRefreshing(false);
     }
 }

@@ -5,10 +5,14 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 /**
- * Created by aung on 7/14/17.
+ * UnsplashPic
+ *
+ * @author SoeThihaTun
+ * @version 1.0
+ * @since 02/12/2017
  */
 
-public class NetworkUtils {
+public class NetworkUtility {
 
     public static boolean isOnline(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

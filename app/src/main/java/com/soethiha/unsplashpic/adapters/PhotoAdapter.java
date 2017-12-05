@@ -50,5 +50,6 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoViewHolder> {
 
     public void setNewData(List<PhotoVO> newPhotoList) {
         mPhotoList = newPhotoList;
+        notifyDataSetChanged();
     }
 }

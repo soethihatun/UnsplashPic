@@ -3,6 +3,7 @@
 buildscript {
     
     repositories {
+        mavenCentral()
         google()
         jcenter()
     }
@@ -24,4 +25,16 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+def unsplashApiKeysProperties = loadUnsplashApiKeys()
+
+ext {
+    clientId = unsplashApiKeysProperties.getProperty('CLIENT_ID')
+}
+
+def loadUnsplashApiKeys() {
+    Properties unsplashApiKeysProperties = new Properties();
+    unsplashApiKeysProperties.load(project.rootProject.file('unsplash_api_keys.properties').newDataInputStream())
+    return unsplashApiKeysProperties;
 }

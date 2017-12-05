@@ -1,7 +1,6 @@
 package com.soethiha.unsplashpic;
 
 import android.app.Application;
-import android.util.Log;
 
 import com.soethiha.unsplashpic.data.models.PhotoModel;
 
@@ -20,7 +19,6 @@ public class UnsplashPicApp extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Log.d(TAG, "onCreate: starts");
         PhotoModel.getObjInstance().loadPhotos(getApplicationContext());
     }
 }

@@ -1,8 +1,11 @@
 package com.soethiha.unsplashpic.activities;
 
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.soethiha.unsplashpic.R;
@@ -28,7 +31,10 @@ import butterknife.ButterKnife;
  * @since 01/12/2017
  */
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements PhotoViewHolder.ControllerPhotoItem {
+
+    @BindView(R.id.swipe_refresh_layout)
+    SwipeRefreshLayout swipeRefreshLayout;
 
     @BindView(R.id.rv_photo_list)
     RecyclerView rvPhotos;
@@ -43,18 +49,39 @@ public class MainActivity extends BaseActivity {
         ButterKnife.bind(this, this);
 
         List<PhotoVO> photoList = PhotoModel.getObjInstance().getPhotoList();
+        controllerPhotoItem = (PhotoViewHolder.ControllerPhotoItem) this;
         mPhotoAdapter = new PhotoAdapter(getApplicationContext(), photoList, controllerPhotoItem);
         Log.d(UnsplashPicApp.TAG, "onCreate: Size = " + (photoList.size()));
         rvPhotos.setAdapter(mPhotoAdapter);
+
+        // Set Layout Manager to Recycler View
+        rvPhotos.setLayoutManager(new LinearLayoutManager(this));
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                // This method performs the actual data-refresh operation.
+                // The method calls setRefreshing(false) when it's finished.
+                refreshPhotoList();
+            }
+        });
+    }
+
+    private void refreshPhotoList() {
+        PhotoModel.getObjInstance().loadPhotos(getApplicationContext());
+        swipeRefreshLayout.setRefreshing(false);
+    }
+
+    @Override
+    public void onTapPhoto(PhotoVO photo, ImageView ivPhoto) {
+        Toast.makeText(this, "Tapped", Toast.LENGTH_SHORT).show();
     }
 
     @Subscribe
     public void onEvent(DataEvent.PCDataLoadedEvent event) {
-        String extra = event.getExtraMessage();
-        Toast.makeText(getApplicationContext(), "Extra : " + extra, Toast.LENGTH_SHORT).show();
-        Log.d(UnsplashPicApp.TAG, "onPCDataLoadedEvent: ");
-
+        String extraMessage = event.getExtraMessage();
         List<PhotoVO> newPhotoList = event.getPhotoList();
+        Toast.makeText(getApplicationContext(), extraMessage + " : " + newPhotoList.size(), Toast.LENGTH_SHORT).show();
         mPhotoAdapter.setNewData(newPhotoList);
     }
 }

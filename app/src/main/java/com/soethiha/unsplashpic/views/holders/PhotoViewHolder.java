@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+import com.soethiha.unsplashpic.GlideApp;
 import com.soethiha.unsplashpic.R;
 import com.soethiha.unsplashpic.data.vos.PhotoVO;
 
@@ -37,14 +37,14 @@ public class PhotoViewHolder extends RecyclerView.ViewHolder implements View.OnC
     public void bindData(PhotoVO photo) {
         mPhoto = photo;
 
-//        String imageUrl = MyanmarAttractionsConstants.IMAGE_ROOT_DIR + photo.getImages()[0];
         String imageUrl = mPhoto.getUrls().getRegular();
 
-        Glide.with(ivPhoto.getContext())
+        GlideApp
+                .with(ivPhoto.getContext())
                 .load(imageUrl)
-//                .centerCrop()
-//                .placeholder(R.drawable.ic_launcher_background)
-//                .error(R.drawable.ic_launcher_background)
+                .centerCrop()
+                .placeholder(R.drawable.ic_launcher_background)
+                .error(R.drawable.ic_launcher_background)
                 .into(ivPhoto);
     }
 

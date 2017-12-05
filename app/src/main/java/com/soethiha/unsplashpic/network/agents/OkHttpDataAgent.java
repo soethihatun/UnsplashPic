@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.soethiha.unsplashpic.BuildConfig;
 import com.soethiha.unsplashpic.data.models.PhotoModel;
 import com.soethiha.unsplashpic.data.vos.PhotoVO;
 import com.soethiha.unsplashpic.network.utils.NetworkConstants;
@@ -15,6 +16,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -58,8 +60,15 @@ public class OkHttpDataAgent implements UnsplashPicDataAgent {
         new AsyncTask<Void, Void, List<PhotoVO>>() {
             @Override
             protected List<PhotoVO> doInBackground(Void... voids) {
+                // https://api.unsplash.com/photos/?client_id=058d27d7a23d475453a0dc5f145844c3a8fd19fdc47b902086f01bc2c805fb06
+                HttpUrl url = new HttpUrl.Builder()
+                        .scheme(NetworkConstants.UNSPLASH_API_SCHEME)
+                        .host(NetworkConstants.UNSPLASH_API_HOST)
+                        .addPathSegment(NetworkConstants.UNSPLASH_API_PATH_SEGMENT)
+                        .addQueryParameter(NetworkConstants.UNSPLASH_API_QUERY_PARAM_KEY, BuildConfig.CLIENT_ID)
+                        .build();
                 Request request = new Request.Builder()
-                        .url(NetworkConstants.UNSPLASH_API_BASE_URL)
+                        .url(url)
                         .build();
 
                 try {

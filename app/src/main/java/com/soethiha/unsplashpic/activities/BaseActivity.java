@@ -3,6 +3,11 @@ package com.soethiha.unsplashpic.activities;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+
+import com.soethiha.unsplashpic.UnsplashPicApp;
+
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * UnsplashPic
@@ -22,5 +27,21 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
+        EventBus eventBus = EventBus.getDefault();
+        if (!eventBus.isRegistered(this)) {
+        Log.d(UnsplashPicApp.TAG, "onStart: ");
+            eventBus.register(this);
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        EventBus eventBus = EventBus.getDefault();
+        if (eventBus.isRegistered(this)) {
+            eventBus.unregister(this);
+        }
     }
 }

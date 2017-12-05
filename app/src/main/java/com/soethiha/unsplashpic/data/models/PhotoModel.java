@@ -3,9 +3,10 @@ package com.soethiha.unsplashpic.data.models;
 import android.content.Context;
 import android.util.Log;
 
-import com.soethiha.unsplashpic.data.vos.CategoryVO;
-import com.soethiha.unsplashpic.data.vos.CurrentUserCollectionVO;
 import com.soethiha.unsplashpic.data.vos.PhotoVO;
+import com.soethiha.unsplashpic.events.DataEvent;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,22 +60,24 @@ public class PhotoModel extends BaseModel {
             Log.d(TAG, "notifyPhotosLoaded: UserLinks = " + photo.getUser().getLinks().toString());
             Log.d(TAG, "notifyPhotosLoaded: PhotoLinks = " + photo.getLinks().toString());
             Log.d(TAG, "notifyPhotosLoaded: PhotoUrls = " + photo.getUrls().toString());
-            CurrentUserCollectionVO currentUser = photo.getCurrentUserCollections().get(0);
-            Log.d(TAG, "notifyPhotosLoaded: CurrentUserCollectionVO = " + currentUser.toString());
-            Log.d(TAG, "notifyPhotosLoaded: CollectionUser = " + currentUser.getUser().toString());
-            Log.d(TAG, "notifyPhotosLoaded: CollectionUserProfileImage = " + currentUser.getUser().getProfileImage().toString());
-            Log.d(TAG, "notifyPhotosLoaded: CollectionUserLinks = " + currentUser.getUser().getLinks().toString());
-            Log.d(TAG, "notifyPhotosLoaded: CollectionLinks = " + currentUser.getLinks().toString());
-            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhoto = " + currentUser.getCoverPhoto().toString());
-            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoLinks = " + currentUser.getCoverPhoto().getLinks().toString());
-            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoUrls = " + currentUser.getCoverPhoto().getUrls().toString());
-            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoUser = " + currentUser.getCoverPhoto().getUser().toString());
-            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoUserLink = " + currentUser.getCoverPhoto().getUser().getLinks().toString());
-            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoProfileImage = " + currentUser.getCoverPhoto().getUser().getProfileImage().toString());
-            CategoryVO category = currentUser.getCoverPhoto().getCategories().get(0);
-            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoCategory = " + category.toString());
-            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoCategoryLinks = " + category.getLinks().toString());
+//            CurrentUserCollectionVO currentUser = photo.getCurrentUserCollections().get(0);
+//            Log.d(TAG, "notifyPhotosLoaded: CurrentUserCollectionVO = " + currentUser.toString());
+//            Log.d(TAG, "notifyPhotosLoaded: CollectionUser = " + currentUser.getUser().toString());
+//            Log.d(TAG, "notifyPhotosLoaded: CollectionUserProfileImage = " + currentUser.getUser().getProfileImage().toString());
+//            Log.d(TAG, "notifyPhotosLoaded: CollectionUserLinks = " + currentUser.getUser().getLinks().toString());
+//            Log.d(TAG, "notifyPhotosLoaded: CollectionLinks = " + currentUser.getLinks().toString());
+//            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhoto = " + currentUser.getCoverPhoto().toString());
+//            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoLinks = " + currentUser.getCoverPhoto().getLinks().toString());
+//            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoUrls = " + currentUser.getCoverPhoto().getUrls().toString());
+//            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoUser = " + currentUser.getCoverPhoto().getUser().toString());
+//            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoUserLink = " + currentUser.getCoverPhoto().getUser().getLinks().toString());
+//            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoProfileImage = " + currentUser.getCoverPhoto().getUser().getProfileImage().toString());
+//            CategoryVO category = currentUser.getCoverPhoto().getCategories().get(0);
+//            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoCategory = " + category.toString());
+//            Log.d(TAG, "notifyPhotosLoaded: CollectionCoverPhotoCategoryLinks = " + category.getLinks().toString());
 
+            DataEvent.PCDataLoadedEvent event = new DataEvent.PCDataLoadedEvent("success", photoList);
+            EventBus.getDefault().post(event);
         }
     }
 

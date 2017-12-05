@@ -20,7 +20,7 @@ public class BaseModel {
     protected UnsplashPicDataAgent dataAgent;
 
     public BaseModel() {
-        initDataAgent(INIT_DATA_AGENT_OFFLINE);
+        initDataAgent(INIT_DATA_AGENT_OK_HTTP);
     }
 
     private void initDataAgent(int initType) {

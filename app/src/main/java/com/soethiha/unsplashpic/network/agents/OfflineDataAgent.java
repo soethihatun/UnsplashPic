@@ -16,7 +16,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 import static com.soethiha.unsplashpic.UnsplashPicApp.TAG;
-import static com.soethiha.unsplashpic.network.utils.NetworkConstants.OFFLINE_SAMPLE_UNSPLASH_PHOTO_JSON_PATH;
+import static com.soethiha.unsplashpic.network.utils.NetworkConstants.OFFLINE_UNSPLASH_PHOTO_JSON_PATH;
 import static com.soethiha.unsplashpic.network.utils.NetworkConstants.PATH_DUMMY_DATA;
 
 /**
@@ -46,7 +46,7 @@ public class OfflineDataAgent implements UnsplashPicDataAgent {
         try {
             // Get the String from Offline Json files
             String jsonStr = JsonUtils.getObjInstance().loadDummyData(context, PATH_DUMMY_DATA,
-                    OFFLINE_SAMPLE_UNSPLASH_PHOTO_JSON_PATH);
+                    OFFLINE_UNSPLASH_PHOTO_JSON_PATH);
 
             // Convert the Json to Value Object Type
             Type listType = new TypeToken<List<PhotoVO>>() {

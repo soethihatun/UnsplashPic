@@ -1,9 +1,11 @@
 package com.soethiha.unsplashpic;
 
 import android.app.Application;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.soethiha.unsplashpic.data.models.PhotoModel;
+import com.soethiha.unsplashpic.utils.JsonUtils;
 import com.soethiha.unsplashpic.utils.NetworkUtils;
 
 /**
@@ -30,5 +32,8 @@ public class UnsplashPicApp extends Application {
         } else {
             Toast.makeText(this, "Connection fail.", Toast.LENGTH_SHORT).show();
         }
+
+        JsonUtils first = JsonUtils.Companion.getInstance();  // This (Singleton@7daf6ecc) is a
+        Log.d(TAG, "onCreate: " + first.hello());
     }
 }

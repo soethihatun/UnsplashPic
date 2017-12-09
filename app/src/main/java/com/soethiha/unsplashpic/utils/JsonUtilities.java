@@ -14,19 +14,18 @@ import java.io.InputStream;
  * @version 1.0
  * @since 02/12/2017
  */
+public class JsonUtilities {
 
-public class JsonUtils {
+    private static JsonUtilities objInstance;
 
-    private static JsonUtils objInstance;
-
-    public static JsonUtils getObjInstance() {
+    public static JsonUtilities getObjInstance() {
         if (objInstance == null) {
-            objInstance = new JsonUtils();
+            objInstance = new JsonUtilities();
         }
         return objInstance;
     }
 
-    private JsonUtils() {
+    private JsonUtilities() {
     }
 
     public String loadDummyData(Context context, String directory, String fileName)

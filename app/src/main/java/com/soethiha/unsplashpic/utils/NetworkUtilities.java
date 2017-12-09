@@ -12,7 +12,7 @@ import android.net.NetworkInfo;
  * @since 02/12/2017
  */
 
-public class NetworkUtility {
+public class NetworkUtilities {
 
     public static boolean isOnline(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

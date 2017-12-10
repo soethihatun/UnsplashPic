@@ -1,4 +1,4 @@
-package com.soethiha.unsplashpic.activities;
+package com.soethiha.unsplashpic.activities.base;
 
 import android.os.Build;
 import android.os.Bundle;

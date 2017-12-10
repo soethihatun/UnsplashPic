@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">UnsplashPic</string>
     <string name="photos_from_unaplash_api">Photos from Unaplash Api</string>
+    <string name="net_con_fail">Connection fail.</string>
 </resources>

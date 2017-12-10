@@ -41,9 +41,6 @@ public class PhotoViewHolder extends RecyclerView.ViewHolder implements View.OnC
         GlideApp
                 .with(ivPhoto.getContext())
                 .load(imageUrl)
-//                .centerCrop()
-//                .placeholder(R.drawable.ic_launcher_background)
-//                .error(R.drawable.ic_launcher_background)
                 .into(ivPhoto);
     }
 

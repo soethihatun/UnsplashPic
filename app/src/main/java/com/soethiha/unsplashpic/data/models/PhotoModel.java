@@ -3,6 +3,7 @@ package com.soethiha.unsplashpic.data.models;
 import android.content.Context;
 import android.util.Log;
 
+import com.soethiha.unsplashpic.data.models.base.BaseModel;
 import com.soethiha.unsplashpic.data.vos.PhotoVO;
 import com.soethiha.unsplashpic.events.DataEvent;
 

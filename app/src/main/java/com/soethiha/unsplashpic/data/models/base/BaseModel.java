@@ -1,4 +1,4 @@
-package com.soethiha.unsplashpic.data.models;
+package com.soethiha.unsplashpic.data.models.base;
 
 import com.soethiha.unsplashpic.network.agents.OfflineDataAgent;
 import com.soethiha.unsplashpic.network.agents.OkHttpDataAgent;

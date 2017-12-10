@@ -3,8 +3,7 @@ package com.soethiha.unsplashpic;
 import android.app.Application;
 import android.widget.Toast;
 
-import com.soethiha.unsplashpic.data.models.PhotoModel;
-import com.soethiha.unsplashpic.utils.NetworkUtilities;
+import com.soethiha.unsplashpic.utils.NetworkUtils;
 
 /**
  * UnsplashPic
@@ -20,10 +19,14 @@ public class UnsplashPicApp extends Application {
     public void onCreate() {
         super.onCreate();
 
-        if (NetworkUtilities.isOnline(getApplicationContext())) {
+        if (!NetworkUtils.Companion.isOnline(getApplicationContext())) {
+            Toast.makeText(this, R.string.net_con_fail, Toast.LENGTH_SHORT).show();
+        }
+
+        /*if (NetworkUtils.Companion.isOnline(getApplicationContext())) {
             PhotoModel.getObjInstance().loadPhotos(getApplicationContext());
         } else {
-            Toast.makeText(this, "Connection fail.", Toast.LENGTH_SHORT).show();
-        }
+            Toast.makeText(this, R.string.net_con_fail, Toast.LENGTH_SHORT).show();
+        }*/
     }
 }

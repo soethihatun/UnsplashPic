@@ -13,7 +13,7 @@ import com.soethiha.unsplashpic.adapters.PhotoAdapter;
 import com.soethiha.unsplashpic.data.models.PhotoModel;
 import com.soethiha.unsplashpic.data.vos.PhotoVO;
 import com.soethiha.unsplashpic.events.DataEvent;
-import com.soethiha.unsplashpic.utils.NetworkUtilities;
+import com.soethiha.unsplashpic.utils.NetworkUtils;
 import com.soethiha.unsplashpic.views.holders.PhotoViewHolder;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -71,7 +71,7 @@ public class MainActivity extends BaseActivity implements PhotoViewHolder.Contro
     }
 
     private void refreshPhotoList() {
-        if (NetworkUtilities.isOnline(getApplicationContext())) {
+        if (NetworkUtils.Companion.isOnline(getApplicationContext())) {
             swipeRefreshLayout.setRefreshing(true);
             PhotoModel.getObjInstance().loadPhotos(getApplicationContext());
         } else {

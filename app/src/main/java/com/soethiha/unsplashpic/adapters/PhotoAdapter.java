@@ -19,7 +19,6 @@ import java.util.List;
  * @version 1.0
  * @since 02/12/2017
  */
-
 public class PhotoAdapter extends RecyclerView.Adapter<PhotoViewHolder> {
 
     private LayoutInflater mInflater;

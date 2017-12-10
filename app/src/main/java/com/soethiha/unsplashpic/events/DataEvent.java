@@ -11,7 +11,6 @@ import java.util.List;
  * @version 1.0
  * @since 02/12/2017
  */
-
 public class DataEvent {
     public static class PCDataLoadedEvent {
 

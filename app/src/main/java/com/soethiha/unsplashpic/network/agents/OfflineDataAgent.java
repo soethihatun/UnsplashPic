@@ -26,7 +26,6 @@ import static com.soethiha.unsplashpic.network.utils.NetworkConstants.PATH_DUMMY
  * @version 1.0
  * @since 02/12/2017
  */
-
 public class OfflineDataAgent implements UnsplashPicDataAgent {
 
     private static OfflineDataAgent objInstance;

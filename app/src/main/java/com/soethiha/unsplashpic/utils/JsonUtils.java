@@ -14,7 +14,6 @@ import java.io.InputStream;
  * @version 1.0
  * @since 02/12/2017
  */
-
 public class JsonUtils {
 
     private static JsonUtils objInstance;

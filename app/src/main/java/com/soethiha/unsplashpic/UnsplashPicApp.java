@@ -13,7 +13,6 @@ import com.soethiha.unsplashpic.utils.NetworkUtility;
  * @version 1.0
  * @since 01/12/2017
  */
-
 public class UnsplashPicApp extends Application {
     public static final String TAG = "UnsplashPicApp";
 

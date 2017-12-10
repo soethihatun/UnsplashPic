@@ -7,7 +7,6 @@ package com.soethiha.unsplashpic.utils;
  * @version 1.0
  * @since 01/12/2017
  */
-
 public final class UnsplashPicConstants {
 
     private UnsplashPicConstants() {

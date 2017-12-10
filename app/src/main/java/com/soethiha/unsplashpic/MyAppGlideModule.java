@@ -10,7 +10,6 @@ import com.bumptech.glide.module.AppGlideModule;
  * @version 1.0
  * @since 05/12/2017
  */
-
 @GlideModule
 public final class MyAppGlideModule extends AppGlideModule {
 }

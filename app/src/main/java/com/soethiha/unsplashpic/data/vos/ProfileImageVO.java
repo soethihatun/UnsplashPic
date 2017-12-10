@@ -4,6 +4,13 @@ package com.soethiha.unsplashpic.data.vos;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * UnsplashPic
+ *
+ * @author SoeThihaTun
+ * @version 1.0
+ * @since 03/12/2017
+ */
 public class ProfileImageVO {
 
     @SerializedName("small")

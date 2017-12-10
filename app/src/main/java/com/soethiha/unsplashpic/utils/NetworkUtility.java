@@ -11,7 +11,6 @@ import android.net.NetworkInfo;
  * @version 1.0
  * @since 02/12/2017
  */
-
 public class NetworkUtility {
 
     public static boolean isOnline(Context context) {

@@ -20,7 +20,6 @@ import static com.soethiha.unsplashpic.UnsplashPicApp.TAG;
  * @version 1.0
  * @since 02/12/2017
  */
-
 public class PhotoModel extends BaseModel {
 
     private static PhotoModel objInstance;

@@ -5,15 +5,13 @@
     android:id="@+id/swipe_refresh_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="com.soethiha.unsplashpic.activities.MainActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_photo_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:paddingBottom="80dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp" />
+        android:background="@android:color/background_dark"/>
 
 </android.support.v4.widget.SwipeRefreshLayout>

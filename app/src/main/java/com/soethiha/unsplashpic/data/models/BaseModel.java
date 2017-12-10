@@ -11,7 +11,6 @@ import com.soethiha.unsplashpic.network.agents.UnsplashPicDataAgent;
  * @version 1.0
  * @since 02/12/2017
  */
-
 public class BaseModel {
 
     private static final int INIT_DATA_AGENT_OFFLINE = 1;

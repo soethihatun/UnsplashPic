@@ -30,7 +30,6 @@ import static com.soethiha.unsplashpic.UnsplashPicApp.TAG;
  * @version 1.0
  * @since 02/12/2017
  */
-
 public class OkHttpDataAgent implements UnsplashPicDataAgent {
 
     private static final int CONNECTION_TIME = 15;

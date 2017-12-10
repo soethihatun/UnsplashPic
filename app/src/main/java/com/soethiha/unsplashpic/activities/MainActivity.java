@@ -31,7 +31,6 @@ import butterknife.ButterKnife;
  * @version 1.0
  * @since 01/12/2017
  */
-
 public class MainActivity extends BaseActivity implements PhotoViewHolder.ControllerPhotoItem {
 
     @BindView(R.id.swipe_refresh_layout)

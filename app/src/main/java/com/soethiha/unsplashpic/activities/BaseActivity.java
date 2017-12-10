@@ -1,9 +1,12 @@
 package com.soethiha.unsplashpic.activities;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.soethiha.unsplashpic.UnsplashPicApp;
 
@@ -16,7 +19,6 @@ import org.greenrobot.eventbus.EventBus;
  * @version 1.0
  * @since 01/12/2017
  */
-
 public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
@@ -27,6 +29,13 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
+        // For Kitkat and Post_Kitkat
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getWindow();
+            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                    WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        }
 
         EventBus eventBus = EventBus.getDefault();
         if (!eventBus.isRegistered(this)) {

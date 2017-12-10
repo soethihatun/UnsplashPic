@@ -9,7 +9,6 @@ import android.content.Context;
  * @version 1.0
  * @since 02/12/2017
  */
-
 public interface UnsplashPicDataAgent {
     void loadPhotos(Context context);
 }

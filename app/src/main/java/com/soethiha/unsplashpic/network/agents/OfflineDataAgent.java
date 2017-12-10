@@ -1,13 +1,12 @@
 package com.soethiha.unsplashpic.network.agents;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.soethiha.unsplashpic.data.models.PhotoModel;
 import com.soethiha.unsplashpic.data.vos.PhotoVO;
-import com.soethiha.unsplashpic.utils.JsonUtilities;
+import com.soethiha.unsplashpic.utils.JsonUtils;
 
 import org.json.JSONException;
 
@@ -15,7 +14,6 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
 
-import static com.soethiha.unsplashpic.UnsplashPicApp.TAG;
 import static com.soethiha.unsplashpic.network.utils.NetworkConstants.OFFLINE_UNSPLASH_PHOTO_JSON_PATH;
 import static com.soethiha.unsplashpic.network.utils.NetworkConstants.PATH_DUMMY_DATA;
 
@@ -26,7 +24,6 @@ import static com.soethiha.unsplashpic.network.utils.NetworkConstants.PATH_DUMMY
  * @version 1.0
  * @since 02/12/2017
  */
-
 public class OfflineDataAgent implements UnsplashPicDataAgent {
 
     private static OfflineDataAgent objInstance;
@@ -45,7 +42,10 @@ public class OfflineDataAgent implements UnsplashPicDataAgent {
     public void loadPhotos(Context context) {
         try {
             // Get the String from Offline Json files
-            String jsonStr = JsonUtilities.getObjInstance().loadDummyData(context, PATH_DUMMY_DATA,
+//            String jsonStr = JsonUtilities.getObjInstance().loadDummyData(context, PATH_DUMMY_DATA,
+//                    OFFLINE_UNSPLASH_PHOTO_JSON_PATH);
+
+            String jsonStr = JsonUtils.Companion.getInstance().loadDummyData(context, PATH_DUMMY_DATA,
                     OFFLINE_UNSPLASH_PHOTO_JSON_PATH);
 
             // Convert the Json to Value Object Type
@@ -58,8 +58,6 @@ public class OfflineDataAgent implements UnsplashPicDataAgent {
                 // Notify error to model
                 PhotoModel.getObjInstance().notifyErrorInLoadingPhotos("Empty photo list");
             } else {
-                Log.d(TAG, "loadPhotos: size = " + photoList.size());
-
                 // Notify loaded Photos to model
                 PhotoModel.getObjInstance().notifyPhotosLoaded(photoList);
             }

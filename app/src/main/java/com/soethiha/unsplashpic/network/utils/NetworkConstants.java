@@ -7,7 +7,6 @@ package com.soethiha.unsplashpic.network.utils;
  * @version 1.0
  * @since 02/12/2017
  */
-
 public final class NetworkConstants {
 
     private NetworkConstants() {

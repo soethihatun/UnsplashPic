@@ -18,7 +18,6 @@ import butterknife.ButterKnife;
  * @version 1.0
  * @since 02/12/2017
  */
-
 public class PhotoViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     @BindView(R.id.iv_photo)
@@ -37,14 +36,11 @@ public class PhotoViewHolder extends RecyclerView.ViewHolder implements View.OnC
     public void bindData(PhotoVO photo) {
         mPhoto = photo;
 
-        String imageUrl = mPhoto.getUrls().getRegular();
+        String imageUrl = mPhoto.getUrls().getSmall();
 
         GlideApp
                 .with(ivPhoto.getContext())
                 .load(imageUrl)
-                .centerCrop()
-                .placeholder(R.drawable.ic_launcher_background)
-                .error(R.drawable.ic_launcher_background)
                 .into(ivPhoto);
     }
 

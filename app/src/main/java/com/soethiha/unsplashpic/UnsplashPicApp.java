@@ -1,12 +1,10 @@
 package com.soethiha.unsplashpic;
 
 import android.app.Application;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.soethiha.unsplashpic.data.models.PhotoModel;
-import com.soethiha.unsplashpic.utils.JsonUtils;
-import com.soethiha.unsplashpic.utils.NetworkUtils;
+import com.soethiha.unsplashpic.utils.NetworkUtilities;
 
 /**
  * UnsplashPic
@@ -15,7 +13,6 @@ import com.soethiha.unsplashpic.utils.NetworkUtils;
  * @version 1.0
  * @since 01/12/2017
  */
-
 public class UnsplashPicApp extends Application {
     public static final String TAG = "UnsplashPicApp";
 
@@ -23,17 +20,10 @@ public class UnsplashPicApp extends Application {
     public void onCreate() {
         super.onCreate();
 
-        // TODO: 12/6/17 Test
-        Toast.makeText(this, "a = " + NetworkUtils.Companion.hello(), Toast.LENGTH_SHORT).show();
-
-        if (NetworkUtils.Companion.isOnline(getApplicationContext())) {
-            Toast.makeText(this, "Connected", Toast.LENGTH_SHORT).show();
+        if (NetworkUtilities.isOnline(getApplicationContext())) {
             PhotoModel.getObjInstance().loadPhotos(getApplicationContext());
         } else {
             Toast.makeText(this, "Connection fail.", Toast.LENGTH_SHORT).show();
         }
-
-        JsonUtils first = JsonUtils.Companion.getInstance();  // This (Singleton@7daf6ecc) is a
-        Log.d(TAG, "onCreate: " + first.hello());
     }
 }

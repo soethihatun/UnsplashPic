@@ -4,12 +4,11 @@ import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.soethiha.unsplashpic.R;
-import com.soethiha.unsplashpic.UnsplashPicApp;
+import com.soethiha.unsplashpic.activities.base.BaseActivity;
 import com.soethiha.unsplashpic.adapters.PhotoAdapter;
 import com.soethiha.unsplashpic.data.models.PhotoModel;
 import com.soethiha.unsplashpic.data.vos.PhotoVO;
@@ -31,7 +30,6 @@ import butterknife.ButterKnife;
  * @version 1.0
  * @since 01/12/2017
  */
-
 public class MainActivity extends BaseActivity implements PhotoViewHolder.ControllerPhotoItem {
 
     @BindView(R.id.swipe_refresh_layout)
@@ -50,9 +48,15 @@ public class MainActivity extends BaseActivity implements PhotoViewHolder.Contro
         ButterKnife.bind(this, this);
 
         List<PhotoVO> photoList = PhotoModel.getObjInstance().getPhotoList();
-        controllerPhotoItem = (PhotoViewHolder.ControllerPhotoItem) this;
+
+        // If no photo list
+        if (photoList == null || photoList.isEmpty()) {
+            // Load the data from data layer
+            refreshPhotoList();
+        }
+
+        controllerPhotoItem = this;
         mPhotoAdapter = new PhotoAdapter(getApplicationContext(), photoList, controllerPhotoItem);
-        Log.d(UnsplashPicApp.TAG, "onCreate: Size = " + (photoList.size()));
         rvPhotos.setAdapter(mPhotoAdapter);
 
         // Set Layout Manager to Recycler View
@@ -61,8 +65,6 @@ public class MainActivity extends BaseActivity implements PhotoViewHolder.Contro
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                // This method performs the actual data-refresh operation.
-                // The method calls setRefreshing(false) when it's finished.
                 refreshPhotoList();
             }
         });
@@ -70,27 +72,33 @@ public class MainActivity extends BaseActivity implements PhotoViewHolder.Contro
 
     private void refreshPhotoList() {
         if (NetworkUtilities.isOnline(getApplicationContext())) {
+            swipeRefreshLayout.setRefreshing(true);
             PhotoModel.getObjInstance().loadPhotos(getApplicationContext());
         } else {
             // Stop loading
             swipeRefreshLayout.setRefreshing(false);
-            Toast.makeText(this, "Connection fail.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.net_con_fail, Toast.LENGTH_SHORT).show();
         }
     }
 
     @Override
     public void onTapPhoto(PhotoVO photo, ImageView ivPhoto) {
-        Toast.makeText(this, "Tapped", Toast.LENGTH_SHORT).show();
+        // Toast.makeText(this, "Tapped", Toast.LENGTH_SHORT).show();
     }
 
     @Subscribe
-    public void onEvent(DataEvent.PCDataLoadedEvent event) {
+    public void onEvent(DataEvent.PhotoDataLoadedEvent event) {
         String extraMessage = event.getExtraMessage();
         List<PhotoVO> newPhotoList = event.getPhotoList();
-        Toast.makeText(getApplicationContext(), extraMessage + " : " + newPhotoList.size(), Toast.LENGTH_SHORT).show();
-        mPhotoAdapter.setNewData(newPhotoList);
 
-        // Stop loading
-        swipeRefreshLayout.setRefreshing(false);
+        Toast.makeText(this, "success - " + newPhotoList.size(), Toast.LENGTH_SHORT).show();
+        if (newPhotoList == null || newPhotoList.isEmpty()) {
+            Toast.makeText(getApplicationContext(), extraMessage, Toast.LENGTH_SHORT).show();
+        } else {
+            mPhotoAdapter.setNewData(newPhotoList);
+
+            // Stop loading
+            swipeRefreshLayout.setRefreshing(false);
+        }
     }
 }

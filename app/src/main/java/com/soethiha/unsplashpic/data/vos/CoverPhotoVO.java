@@ -6,6 +6,13 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+/**
+ * UnsplashPic
+ *
+ * @author SoeThihaTun
+ * @version 1.0
+ * @since 03/12/2017
+ */
 public class CoverPhotoVO {
 
     @SerializedName("id")

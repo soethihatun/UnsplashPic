@@ -19,7 +19,6 @@ import java.util.List;
  * @version 1.0
  * @since 02/12/2017
  */
-
 public class PhotoAdapter extends RecyclerView.Adapter<PhotoViewHolder> {
 
     private LayoutInflater mInflater;
@@ -48,6 +47,10 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoViewHolder> {
         return mPhotoList.size();
     }
 
+    /**
+     * Swap the photo list with new photo list and notify
+     * @param newPhotoList New Photo list from data source
+     */
     public void setNewData(List<PhotoVO> newPhotoList) {
         mPhotoList = newPhotoList;
         notifyDataSetChanged();

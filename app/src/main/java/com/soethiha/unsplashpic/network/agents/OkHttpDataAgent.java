@@ -30,7 +30,6 @@ import static com.soethiha.unsplashpic.UnsplashPicApp.TAG;
  * @version 1.0
  * @since 02/12/2017
  */
-
 public class OkHttpDataAgent implements UnsplashPicDataAgent {
 
     private static final int CONNECTION_TIME = 15;
@@ -38,7 +37,7 @@ public class OkHttpDataAgent implements UnsplashPicDataAgent {
     private static final int WRITE_TIME = 15;
 
     private static OkHttpDataAgent objInstance;
-    private OkHttpClient okHttpClient;
+    private static OkHttpClient okHttpClient;
 
     private OkHttpDataAgent() {
         okHttpClient = new OkHttpClient.Builder()
@@ -57,53 +56,52 @@ public class OkHttpDataAgent implements UnsplashPicDataAgent {
 
     @Override
     public void loadPhotos(Context context) {
-        new AsyncTask<Void, Void, List<PhotoVO>>() {
-            @Override
-            protected List<PhotoVO> doInBackground(Void... voids) {
-                // https://api.unsplash.com/photos/?client_id=058d27d7a23d475453a0dc5f145844c3a8fd19fdc47b902086f01bc2c805fb06
-                HttpUrl url = new HttpUrl.Builder()
-                        .scheme(NetworkConstants.UNSPLASH_API_SCHEME)
-                        .host(NetworkConstants.UNSPLASH_API_HOST)
-                        .addPathSegment(NetworkConstants.UNSPLASH_API_PATH_SEGMENT)
-                        .addQueryParameter(NetworkConstants.UNSPLASH_API_QUERY_PARAM_KEY, BuildConfig.CLIENT_ID)
-                        .build();
-                Request request = new Request.Builder()
-                        .url(url)
-                        .build();
+        new PhotoTask().execute();
+    }
 
-                try {
-                    Response response = okHttpClient.newCall(request).execute();
-                    if (response.isSuccessful()) {
-                        if (response.body() != null) {
-                            String responseString = response.body().string();
-                            Log.d(TAG, "doInBackground: " + responseString);
+    private static class PhotoTask extends AsyncTask<Void, Void, List<PhotoVO>> {
+        @Override
+        protected List<PhotoVO> doInBackground(Void... voids) {
+            // https://api.unsplash.com/photos/?client_id=058d27d7a23d475453a0dc5f145844c3a8fd19fdc47b902086f01bc2c805fb06
+            HttpUrl url = new HttpUrl.Builder()
+                    .scheme(NetworkConstants.UNSPLASH_API_SCHEME)
+                    .host(NetworkConstants.UNSPLASH_API_HOST)
+                    .addPathSegment(NetworkConstants.UNSPLASH_API_PATH_SEGMENT)
+                    .addQueryParameter(NetworkConstants.UNSPLASH_API_QUERY_PARAM_KEY, BuildConfig.CLIENT_ID)
+                    .build();
+            Request request = new Request.Builder()
+                    .url(url)
+                    .build();
 
-                            // Convert the Json to Value Object Type
-                            Type listType = new TypeToken<List<PhotoVO>>() {
-                            }.getType();
-                            List<PhotoVO> photoList = new Gson().fromJson(responseString, listType);
-                            return photoList;
-                        }
-                    } else {
-                        PhotoModel.getObjInstance().notifyErrorInLoadingPhotos(response.message());
+            try {
+                Response response = okHttpClient.newCall(request).execute();
+                if (response.isSuccessful()) {
+                    if (response.body() != null) {
+                        String responseString = response.body().string();
+
+                        // Convert the Json to Value Object Type
+                        Type listType = new TypeToken<List<PhotoVO>>() {
+                        }.getType();
+                        return new Gson().fromJson(responseString, listType);
                     }
-                } catch (IOException ioe) {
-                    Log.e(TAG, ioe.getMessage());
-                    PhotoModel.getObjInstance().notifyErrorInLoadingPhotos(ioe.getMessage());
-                }
-                return null;
-            }
-
-            @Override
-            protected void onPostExecute(List<PhotoVO> photoList) {
-                super.onPostExecute(photoList);
-                if (photoList != null && photoList.size() > 0) {
-                    Log.d(TAG, "onPostExecute: photoList.size() = " + photoList.size());
-                    PhotoModel.getObjInstance().notifyPhotosLoaded(photoList);
                 } else {
-                    PhotoModel.getObjInstance().notifyErrorInLoadingPhotos("Empty Photo List");
+                    PhotoModel.getObjInstance().notifyErrorInLoadingPhotos(response.message());
                 }
+            } catch (IOException ioe) {
+                Log.e(TAG, ioe.getMessage());
+                PhotoModel.getObjInstance().notifyErrorInLoadingPhotos(ioe.getMessage());
             }
-        }.execute();
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(List<PhotoVO> photoList) {
+            super.onPostExecute(photoList);
+            if (photoList != null && photoList.size() > 0) {
+                PhotoModel.getObjInstance().notifyPhotosLoaded(photoList);
+            } else {
+                PhotoModel.getObjInstance().notifyErrorInLoadingPhotos("Empty Photo List");
+            }
+        }
     }
 }

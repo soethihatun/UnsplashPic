@@ -6,7 +6,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.soethiha.unsplashpic.data.models.PhotoModel;
 import com.soethiha.unsplashpic.data.vos.PhotoVO;
-import com.soethiha.unsplashpic.utils.JsonUtils;
+import com.soethiha.unsplashpic.utils.kotlin.JsonUtils;
 
 import org.json.JSONException;
 
@@ -42,7 +42,7 @@ public class OfflineDataAgent implements UnsplashPicDataAgent {
     public void loadPhotos(Context context) {
         try {
             // Get the String from Offline Json files
-            String jsonStr = JsonUtils.getObjInstance().loadDummyData(context, PATH_DUMMY_DATA,
+            String jsonStr = JsonUtils.Companion.getInstance().loadDummyData(context, PATH_DUMMY_DATA,
                     OFFLINE_UNSPLASH_PHOTO_JSON_PATH);
 
             // Convert the Json to Value Object Type

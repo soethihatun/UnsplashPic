@@ -13,7 +13,7 @@ import com.soethiha.unsplashpic.adapters.PhotoAdapter;
 import com.soethiha.unsplashpic.data.models.PhotoModel;
 import com.soethiha.unsplashpic.data.vos.PhotoVO;
 import com.soethiha.unsplashpic.events.DataEvent;
-import com.soethiha.unsplashpic.utils.NetworkUtility;
+import com.soethiha.unsplashpic.utils.kotlin.NetworkUtils;
 import com.soethiha.unsplashpic.views.holders.PhotoViewHolder;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -71,7 +71,7 @@ public class MainActivity extends BaseActivity implements PhotoViewHolder.Contro
     }
 
     private void refreshPhotoList() {
-        if (NetworkUtility.isOnline(getApplicationContext())) {
+        if (NetworkUtils.Companion.isOnline(getApplicationContext())) {
             swipeRefreshLayout.setRefreshing(true);
             PhotoModel.getObjInstance().loadPhotos(getApplicationContext());
         } else {
@@ -90,10 +90,10 @@ public class MainActivity extends BaseActivity implements PhotoViewHolder.Contro
     public void onEvent(DataEvent.PhotoDataLoadedEvent event) {
         String extraMessage = event.getExtraMessage();
         List<PhotoVO> newPhotoList = event.getPhotoList();
+
         if (newPhotoList == null || newPhotoList.isEmpty()) {
             Toast.makeText(getApplicationContext(), extraMessage, Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(getApplicationContext(), extraMessage + " : " + newPhotoList.size(), Toast.LENGTH_SHORT).show();
             mPhotoAdapter.setNewData(newPhotoList);
 
             // Stop loading

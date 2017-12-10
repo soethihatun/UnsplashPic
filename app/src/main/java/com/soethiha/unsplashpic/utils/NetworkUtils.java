@@ -11,7 +11,7 @@ import android.net.NetworkInfo;
  * @version 1.0
  * @since 02/12/2017
  */
-public class NetworkUtility {
+public class NetworkUtils {
 
     public static boolean isOnline(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -20,7 +20,7 @@ public class NetworkUtility {
             netInfo = cm.getActiveNetworkInfo();
         }
 
-        //should check null because in air plan mode it will be null
+        // Should check null because in air plan mode it will be null
         return (netInfo != null && netInfo.isConnected());
     }
 }

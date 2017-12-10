@@ -48,6 +48,7 @@ public class PhotoModel extends BaseModel {
     }
 
     public void notifyPhotosLoaded(List<PhotoVO> photoList) {
+        Log.d(TAG, "notifyPhotosLoaded: " + photoList.size());
         if (photoList != null) {
             // Swap new data
             mPhotoList = photoList;

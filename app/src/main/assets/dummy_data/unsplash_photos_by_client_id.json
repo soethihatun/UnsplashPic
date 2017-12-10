@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "id": "mVKgtSrIeYg",
     "created_at": "2017-12-08T09:28:43-05:00",
     "updated_at": "2017-12-09T15:54:56-05:00",
@@ -51,10 +52,64 @@
       "total_likes": 0,
       "total_photos": 5,
       "total_collections": 0
+=======
+    "id": "574ufeiLfHA",
+    "created_at": "2017-12-09T20:39:15-05:00",
+    "updated_at": "2017-12-10T06:42:02-05:00",
+    "width": 4480,
+    "height": 6720,
+    "color": "#E2DEDD",
+    "description": null,
+    "urls": {
+      "raw": "https://images.unsplash.com/photo-1512869915288-bc1f58324319",
+      "full": "https://images.unsplash.com/photo-1512869915288-bc1f58324319?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=c83a9b05c43c1c9f16e87d4316a1f230",
+      "regular": "https://images.unsplash.com/photo-1512869915288-bc1f58324319?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=891f59821b996b9a2c5233b834b241b7",
+      "small": "https://images.unsplash.com/photo-1512869915288-bc1f58324319?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&s=fced02be706b9f1a1eb60a28aa040415",
+      "thumb": "https://images.unsplash.com/photo-1512869915288-bc1f58324319?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=ffcc238041183f78d502dee740ff4470"
+    },
+    "categories": [],
+    "links": {
+      "self": "https://api.unsplash.com/photos/574ufeiLfHA",
+      "html": "https://unsplash.com/photos/574ufeiLfHA",
+      "download": "https://unsplash.com/photos/574ufeiLfHA/download",
+      "download_location": "https://api.unsplash.com/photos/574ufeiLfHA/download"
+    },
+    "liked_by_user": false,
+    "likes": 65,
+    "user": {
+      "id": "dG6lZyj-wvM",
+      "updated_at": "2017-12-10T06:47:59-05:00",
+      "username": "nate_dumlao",
+      "name": "Nathan Dumlao",
+      "first_name": "Nathan",
+      "last_name": "Dumlao",
+      "twitter_username": "Nate_Dumlao",
+      "portfolio_url": "http://www.nathandumlaophotos.com",
+      "bio": "Brand Consultant and Content Creator living in Los Angeles creating up the coast.",
+      "location": "Los Angeles",
+      "links": {
+        "self": "https://api.unsplash.com/users/nate_dumlao",
+        "html": "https://unsplash.com/@nate_dumlao",
+        "photos": "https://api.unsplash.com/users/nate_dumlao/photos",
+        "likes": "https://api.unsplash.com/users/nate_dumlao/likes",
+        "portfolio": "https://api.unsplash.com/users/nate_dumlao/portfolio",
+        "following": "https://api.unsplash.com/users/nate_dumlao/following",
+        "followers": "https://api.unsplash.com/users/nate_dumlao/followers"
+      },
+      "profile_image": {
+        "small": "https://images.unsplash.com/profile-1495427732560-fe5248ad6638?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32&s=8e6405920894a45ce9204dd11d1465f3",
+        "medium": "https://images.unsplash.com/profile-1495427732560-fe5248ad6638?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64&s=1978e1f9440ee4cc1da03c318068593f",
+        "large": "https://images.unsplash.com/profile-1495427732560-fe5248ad6638?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=8f75defe3b90fd37243d80d207c8c6d6"
+      },
+      "total_likes": 247,
+      "total_photos": 169,
+      "total_collections": 1
+>>>>>>> migrate_to_kotlin
     },
     "current_user_collections": []
   },
   {
+<<<<<<< HEAD
     "id": "okwrRn4nscY",
     "created_at": "2017-12-08T09:30:19-05:00",
     "updated_at": "2017-12-09T15:54:54-05:00",
@@ -106,10 +161,64 @@
       "total_likes": 0,
       "total_photos": 5,
       "total_collections": 0
+=======
+    "id": "o2iNdd7wQns",
+    "created_at": "2017-12-10T03:50:04-05:00",
+    "updated_at": "2017-12-10T06:39:29-05:00",
+    "width": 5472,
+    "height": 3648,
+    "color": "#FCC19A",
+    "description": null,
+    "urls": {
+      "raw": "https://images.unsplash.com/photo-1512895691935-ddd98c716644",
+      "full": "https://images.unsplash.com/photo-1512895691935-ddd98c716644?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=e1e5125021ab5ea068c8624b9b70b9bd",
+      "regular": "https://images.unsplash.com/photo-1512895691935-ddd98c716644?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=8c39d8add132c0e86ae1e57b357ab75d",
+      "small": "https://images.unsplash.com/photo-1512895691935-ddd98c716644?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&s=71cac6cd246d89bca88a2f87a8ec3e3e",
+      "thumb": "https://images.unsplash.com/photo-1512895691935-ddd98c716644?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=3a10b695dd3670c6fd2e9055f167e004"
+    },
+    "categories": [],
+    "links": {
+      "self": "https://api.unsplash.com/photos/o2iNdd7wQns",
+      "html": "https://unsplash.com/photos/o2iNdd7wQns",
+      "download": "https://unsplash.com/photos/o2iNdd7wQns/download",
+      "download_location": "https://api.unsplash.com/photos/o2iNdd7wQns/download"
+    },
+    "liked_by_user": false,
+    "likes": 59,
+    "user": {
+      "id": "XZDJrfKzdWY",
+      "updated_at": "2017-12-10T13:29:55-05:00",
+      "username": "eberhardgross",
+      "name": "eberhard grossgasteiger",
+      "first_name": "eberhard",
+      "last_name": "grossgasteiger",
+      "twitter_username": "eberhardgross",
+      "portfolio_url": "http://eberhardgross.earth",
+      "bio": "++++ Simplicity is the ultimate sophistication, nothing is more challenging! ++++                                     \r\n\r\nhttps://instagram.com/eberhard_grossgasteiger\r\n\r\n\r\n\r\n",
+      "location": "Ahrntal, South Tyrol, Italy",
+      "links": {
+        "self": "https://api.unsplash.com/users/eberhardgross",
+        "html": "https://unsplash.com/@eberhardgross",
+        "photos": "https://api.unsplash.com/users/eberhardgross/photos",
+        "likes": "https://api.unsplash.com/users/eberhardgross/likes",
+        "portfolio": "https://api.unsplash.com/users/eberhardgross/portfolio",
+        "following": "https://api.unsplash.com/users/eberhardgross/following",
+        "followers": "https://api.unsplash.com/users/eberhardgross/followers"
+      },
+      "profile_image": {
+        "small": "https://images.unsplash.com/profile-1511631571398-d902b9c193c4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32&s=2f03550e0765e391d46592be75cf89fc",
+        "medium": "https://images.unsplash.com/profile-1511631571398-d902b9c193c4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64&s=6225350f9b45560f51feabc83eb1c88b",
+        "large": "https://images.unsplash.com/profile-1511631571398-d902b9c193c4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=2b5b5bfae8ca3d9ee7ffd0352ae3537a"
+      },
+      "total_likes": 1192,
+      "total_photos": 169,
+      "total_collections": 5
+>>>>>>> migrate_to_kotlin
     },
     "current_user_collections": []
   },
   {
+<<<<<<< HEAD
     "id": "9QL1DZLBbS4",
     "created_at": "2017-12-08T15:50:32-05:00",
     "updated_at": "2017-12-09T15:54:09-05:00",
@@ -161,10 +270,64 @@
       "total_likes": 0,
       "total_photos": 5,
       "total_collections": 1
+=======
+    "id": "j3-tTwJ7xRQ",
+    "created_at": "2017-12-10T00:48:32-05:00",
+    "updated_at": "2017-12-10T06:38:26-05:00",
+    "width": 2480,
+    "height": 2492,
+    "color": "#FE832C",
+    "description": null,
+    "urls": {
+      "raw": "https://images.unsplash.com/photo-1512884592642-04a656e1680f",
+      "full": "https://images.unsplash.com/photo-1512884592642-04a656e1680f?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=56b10447daaf0501864ddc2ed1dba6c9",
+      "regular": "https://images.unsplash.com/photo-1512884592642-04a656e1680f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=1335050bf016aaaedbedac40debd9c43",
+      "small": "https://images.unsplash.com/photo-1512884592642-04a656e1680f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&s=2e3212cc294d1e478b8ba4858a848e42",
+      "thumb": "https://images.unsplash.com/photo-1512884592642-04a656e1680f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=2685eb16822fe1e40fcc44379f6feb8d"
+    },
+    "categories": [],
+    "links": {
+      "self": "https://api.unsplash.com/photos/j3-tTwJ7xRQ",
+      "html": "https://unsplash.com/photos/j3-tTwJ7xRQ",
+      "download": "https://unsplash.com/photos/j3-tTwJ7xRQ/download",
+      "download_location": "https://api.unsplash.com/photos/j3-tTwJ7xRQ/download"
+    },
+    "liked_by_user": false,
+    "likes": 48,
+    "user": {
+      "id": "4-VSKrZuhLA",
+      "updated_at": "2017-12-10T00:48:32-05:00",
+      "username": "darshan394",
+      "name": "Deva Darshan",
+      "first_name": "Deva",
+      "last_name": "Darshan",
+      "twitter_username": null,
+      "portfolio_url": "https://www.instagram.com/darshan394/?hl=en",
+      "bio": "D&D 📷📸📹🎥📽🎞 🚗🎼📱Mixed Photography & Video ",
+      "location": "Kuala Lumpur",
+      "links": {
+        "self": "https://api.unsplash.com/users/darshan394",
+        "html": "https://unsplash.com/@darshan394",
+        "photos": "https://api.unsplash.com/users/darshan394/photos",
+        "likes": "https://api.unsplash.com/users/darshan394/likes",
+        "portfolio": "https://api.unsplash.com/users/darshan394/portfolio",
+        "following": "https://api.unsplash.com/users/darshan394/following",
+        "followers": "https://api.unsplash.com/users/darshan394/followers"
+      },
+      "profile_image": {
+        "small": "https://images.unsplash.com/profile-1508916614161-0909942a4a81?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32&s=4b3e52ac69644c54ea68918224d0c27c",
+        "medium": "https://images.unsplash.com/profile-1508916614161-0909942a4a81?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64&s=e69645f3d48ff5edb7868fd640dfe77c",
+        "large": "https://images.unsplash.com/profile-1508916614161-0909942a4a81?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=74ad3d2d860cfc1ced26acca3493cbbd"
+      },
+      "total_likes": 302,
+      "total_photos": 27,
+      "total_collections": 7
+>>>>>>> migrate_to_kotlin
     },
     "current_user_collections": []
   },
   {
+<<<<<<< HEAD
     "id": "nEfTVfbH0R0",
     "created_at": "2017-12-08T14:01:43-05:00",
     "updated_at": "2017-12-09T15:53:55-05:00",
@@ -215,11 +378,64 @@
       },
       "total_likes": 0,
       "total_photos": 6,
+=======
+    "id": "qxGZzEa4N3o",
+    "created_at": "2017-12-10T00:24:13-05:00",
+    "updated_at": "2017-12-10T06:38:16-05:00",
+    "width": 2918,
+    "height": 3647,
+    "color": "#D6CEC6",
+    "description": null,
+    "urls": {
+      "raw": "https://images.unsplash.com/photo-1512883306362-13be19796cb4",
+      "full": "https://images.unsplash.com/photo-1512883306362-13be19796cb4?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=73549addb6c717ecdf18d601226186d9",
+      "regular": "https://images.unsplash.com/photo-1512883306362-13be19796cb4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=875c7839b41575d1b79369043d49b154",
+      "small": "https://images.unsplash.com/photo-1512883306362-13be19796cb4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&s=1b2994856035e54a1ee3ccd3489e6a9e",
+      "thumb": "https://images.unsplash.com/photo-1512883306362-13be19796cb4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=08c926bb0bdbcc69f219b524841b825c"
+    },
+    "categories": [],
+    "links": {
+      "self": "https://api.unsplash.com/photos/qxGZzEa4N3o",
+      "html": "https://unsplash.com/photos/qxGZzEa4N3o",
+      "download": "https://unsplash.com/photos/qxGZzEa4N3o/download",
+      "download_location": "https://api.unsplash.com/photos/qxGZzEa4N3o/download"
+    },
+    "liked_by_user": false,
+    "likes": 45,
+    "user": {
+      "id": "PDgFNOiNdRs",
+      "updated_at": "2017-12-10T12:44:01-05:00",
+      "username": "paulclarkphotos",
+      "name": "Paul Clark",
+      "first_name": "Paul",
+      "last_name": "Clark",
+      "twitter_username": null,
+      "portfolio_url": "https://www.instagram.com/paulclarkphotos/",
+      "bio": "Just trying to have fun and do something new. \r\n\r\n║Instagram: @paulclarkphotos║",
+      "location": "Bay Area, CA",
+      "links": {
+        "self": "https://api.unsplash.com/users/paulclarkphotos",
+        "html": "https://unsplash.com/@paulclarkphotos",
+        "photos": "https://api.unsplash.com/users/paulclarkphotos/photos",
+        "likes": "https://api.unsplash.com/users/paulclarkphotos/likes",
+        "portfolio": "https://api.unsplash.com/users/paulclarkphotos/portfolio",
+        "following": "https://api.unsplash.com/users/paulclarkphotos/following",
+        "followers": "https://api.unsplash.com/users/paulclarkphotos/followers"
+      },
+      "profile_image": {
+        "small": "https://images.unsplash.com/profile-1511732783136-7635fa9947f7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32&s=3c9ef031478bd8e2731d5459040ef0a9",
+        "medium": "https://images.unsplash.com/profile-1511732783136-7635fa9947f7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64&s=fd630fce981cf69183654945153f1cbb",
+        "large": "https://images.unsplash.com/profile-1511732783136-7635fa9947f7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=d429ebba1bfbb1a541494a495dad11dd"
+      },
+      "total_likes": 36,
+      "total_photos": 5,
+>>>>>>> migrate_to_kotlin
       "total_collections": 0
     },
     "current_user_collections": []
   },
   {
+<<<<<<< HEAD
     "id": "i5SbksX33RM",
     "created_at": "2017-12-08T11:23:36-05:00",
     "updated_at": "2017-12-09T15:53:50-05:00",
@@ -271,10 +487,64 @@
       "total_likes": 2,
       "total_photos": 32,
       "total_collections": 0
+=======
+    "id": "5uk858IneoY",
+    "created_at": "2017-12-09T16:48:43-05:00",
+    "updated_at": "2017-12-10T06:37:32-05:00",
+    "width": 4032,
+    "height": 3024,
+    "color": "#D3E5ED",
+    "description": null,
+    "urls": {
+      "raw": "https://images.unsplash.com/photo-1512856006263-43d272e475f6",
+      "full": "https://images.unsplash.com/photo-1512856006263-43d272e475f6?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=bcbd4d0e6cf4acba57300a5d51f6ea12",
+      "regular": "https://images.unsplash.com/photo-1512856006263-43d272e475f6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=8cde5a9ecc70926b1d4e7c28741bcdef",
+      "small": "https://images.unsplash.com/photo-1512856006263-43d272e475f6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&s=02f19e296d39ba124809219a8af0f32e",
+      "thumb": "https://images.unsplash.com/photo-1512856006263-43d272e475f6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=632ac6f6fc97808d62160c225aa39879"
+    },
+    "categories": [],
+    "links": {
+      "self": "https://api.unsplash.com/photos/5uk858IneoY",
+      "html": "https://unsplash.com/photos/5uk858IneoY",
+      "download": "https://unsplash.com/photos/5uk858IneoY/download",
+      "download_location": "https://api.unsplash.com/photos/5uk858IneoY/download"
+    },
+    "liked_by_user": false,
+    "likes": 48,
+    "user": {
+      "id": "8W1rBhqAtMU",
+      "updated_at": "2017-12-10T11:04:03-05:00",
+      "username": "impatrickt",
+      "name": "Patrick Tomasso",
+      "first_name": "Patrick",
+      "last_name": "Tomasso",
+      "twitter_username": "imPatrickT",
+      "portfolio_url": "http://instagram.com/impatrickt",
+      "bio": "Toronto Unsplash Ambassador - @IMPATRICKT Everywhere\r\npt@patricktomasso.com for collaborations!",
+      "location": "Toronto",
+      "links": {
+        "self": "https://api.unsplash.com/users/impatrickt",
+        "html": "https://unsplash.com/@impatrickt",
+        "photos": "https://api.unsplash.com/users/impatrickt/photos",
+        "likes": "https://api.unsplash.com/users/impatrickt/likes",
+        "portfolio": "https://api.unsplash.com/users/impatrickt/portfolio",
+        "following": "https://api.unsplash.com/users/impatrickt/following",
+        "followers": "https://api.unsplash.com/users/impatrickt/followers"
+      },
+      "profile_image": {
+        "small": "https://images.unsplash.com/profile-fb-1444241666-4923a57f944a.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32&s=b70b99dcc215e2dbbe811ddf92d1dac3",
+        "medium": "https://images.unsplash.com/profile-fb-1444241666-4923a57f944a.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64&s=26439789586d9fa2a6251822d86d887b",
+        "large": "https://images.unsplash.com/profile-fb-1444241666-4923a57f944a.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=d263b37f8dac7266e718f78294364309"
+      },
+      "total_likes": 230,
+      "total_photos": 113,
+      "total_collections": 4
+>>>>>>> migrate_to_kotlin
     },
     "current_user_collections": []
   },
   {
+<<<<<<< HEAD
     "id": "ywJx2-ZD8UU",
     "created_at": "2017-12-09T15:52:12-05:00",
     "updated_at": "2017-12-09T15:53:25-05:00",
@@ -326,10 +596,64 @@
       "total_likes": 26,
       "total_photos": 22,
       "total_collections": 1
+=======
+    "id": "wQIqomnjBWI",
+    "created_at": "2017-12-09T15:53:54-05:00",
+    "updated_at": "2017-12-10T06:37:29-05:00",
+    "width": 6016,
+    "height": 4016,
+    "color": "#1A213E",
+    "description": null,
+    "urls": {
+      "raw": "https://images.unsplash.com/photo-1512852756768-2e890503aacf",
+      "full": "https://images.unsplash.com/photo-1512852756768-2e890503aacf?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=408ef002c1f2b1f6a088ea1e3cffde11",
+      "regular": "https://images.unsplash.com/photo-1512852756768-2e890503aacf?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=1e9ec0a96fba05ee814ed5a6316f92ac",
+      "small": "https://images.unsplash.com/photo-1512852756768-2e890503aacf?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&s=caef3595ecc0ccb9f6a5e84086f4e4c5",
+      "thumb": "https://images.unsplash.com/photo-1512852756768-2e890503aacf?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=1f7216c1695aaa1dbeac787d9aa91c58"
+    },
+    "categories": [],
+    "links": {
+      "self": "https://api.unsplash.com/photos/wQIqomnjBWI",
+      "html": "https://unsplash.com/photos/wQIqomnjBWI",
+      "download": "https://unsplash.com/photos/wQIqomnjBWI/download",
+      "download_location": "https://api.unsplash.com/photos/wQIqomnjBWI/download"
+    },
+    "liked_by_user": false,
+    "likes": 25,
+    "user": {
+      "id": "ZDBMys8pcIc",
+      "updated_at": "2017-12-10T10:44:15-05:00",
+      "username": "jeztimms",
+      "name": "Jez Timms",
+      "first_name": "Jez",
+      "last_name": "Timms",
+      "twitter_username": "MisterJez",
+      "portfolio_url": "https://jeztimms.carrd.co",
+      "bio": "Owner of Torpedo Juice design & marketing agency in Tunbridge Wells, Kent.\r\n\r\nGraphic & web designer/developer. Also not bad with a camera...\r\n",
+      "location": "Tunbridge Wells, UK",
+      "links": {
+        "self": "https://api.unsplash.com/users/jeztimms",
+        "html": "https://unsplash.com/@jeztimms",
+        "photos": "https://api.unsplash.com/users/jeztimms/photos",
+        "likes": "https://api.unsplash.com/users/jeztimms/likes",
+        "portfolio": "https://api.unsplash.com/users/jeztimms/portfolio",
+        "following": "https://api.unsplash.com/users/jeztimms/following",
+        "followers": "https://api.unsplash.com/users/jeztimms/followers"
+      },
+      "profile_image": {
+        "small": "https://images.unsplash.com/profile-1452195372219-8d697636c0c0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32&s=91117f4921892beabf402a36e97d7d81",
+        "medium": "https://images.unsplash.com/profile-1452195372219-8d697636c0c0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64&s=39d9c19e7e195620e3abfa11d309745c",
+        "large": "https://images.unsplash.com/profile-1452195372219-8d697636c0c0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=b58dd57b3ccb953f8b5e71b99c282c35"
+      },
+      "total_likes": 82,
+      "total_photos": 138,
+      "total_collections": 0
+>>>>>>> migrate_to_kotlin
     },
     "current_user_collections": []
   },
   {
+<<<<<<< HEAD
     "id": "7IBigEuL9Tw",
     "created_at": "2017-12-09T15:22:26-05:00",
     "updated_at": "2017-12-09T15:53:08-05:00",
@@ -381,10 +705,64 @@
       "total_likes": 0,
       "total_photos": 23,
       "total_collections": 4
+=======
+    "id": "STwkILWETmo",
+    "created_at": "2017-12-09T15:24:45-05:00",
+    "updated_at": "2017-12-10T06:37:23-05:00",
+    "width": 5184,
+    "height": 3456,
+    "color": "#C9D2D1",
+    "description": null,
+    "urls": {
+      "raw": "https://images.unsplash.com/photo-1512850958844-70d66581e2b7",
+      "full": "https://images.unsplash.com/photo-1512850958844-70d66581e2b7?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=dbe22f8b47f49e623764d5f7fb2ba96f",
+      "regular": "https://images.unsplash.com/photo-1512850958844-70d66581e2b7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=cbce244b5a805f9f4590da9b4d39c268",
+      "small": "https://images.unsplash.com/photo-1512850958844-70d66581e2b7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&s=87db8106af7ab69adcf23785ea828467",
+      "thumb": "https://images.unsplash.com/photo-1512850958844-70d66581e2b7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=f43a01f0b53e00d71836c17d9f31b9dc"
+    },
+    "categories": [],
+    "links": {
+      "self": "https://api.unsplash.com/photos/STwkILWETmo",
+      "html": "https://unsplash.com/photos/STwkILWETmo",
+      "download": "https://unsplash.com/photos/STwkILWETmo/download",
+      "download_location": "https://api.unsplash.com/photos/STwkILWETmo/download"
+    },
+    "liked_by_user": false,
+    "likes": 10,
+    "user": {
+      "id": "MPN_qMVtFsY",
+      "updated_at": "2017-12-09T21:32:40-05:00",
+      "username": "joanna_nix",
+      "name": "Joanna Nix",
+      "first_name": "Joanna",
+      "last_name": "Nix",
+      "twitter_username": null,
+      "portfolio_url": null,
+      "bio": "Business and Economics college student with a passion for photography in Grand Rapids, Michigan ✋🏻",
+      "location": null,
+      "links": {
+        "self": "https://api.unsplash.com/users/joanna_nix",
+        "html": "https://unsplash.com/@joanna_nix",
+        "photos": "https://api.unsplash.com/users/joanna_nix/photos",
+        "likes": "https://api.unsplash.com/users/joanna_nix/likes",
+        "portfolio": "https://api.unsplash.com/users/joanna_nix/portfolio",
+        "following": "https://api.unsplash.com/users/joanna_nix/following",
+        "followers": "https://api.unsplash.com/users/joanna_nix/followers"
+      },
+      "profile_image": {
+        "small": "https://images.unsplash.com/profile-1505060501025-7468fa0c8bea?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32&s=6082d3212c344fbed10b08aee6d08e03",
+        "medium": "https://images.unsplash.com/profile-1505060501025-7468fa0c8bea?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64&s=53b6f86e2bf95df503f886aa7ebd6ed0",
+        "large": "https://images.unsplash.com/profile-1505060501025-7468fa0c8bea?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=5c58ddd65d0afbd8eaab9221b2a19f53"
+      },
+      "total_likes": 19,
+      "total_photos": 24,
+      "total_collections": 0
+>>>>>>> migrate_to_kotlin
     },
     "current_user_collections": []
   },
   {
+<<<<<<< HEAD
     "id": "YyeVYBeg-Jc",
     "created_at": "2017-12-09T15:22:05-05:00",
     "updated_at": "2017-12-09T15:53:05-05:00",
@@ -436,10 +814,64 @@
       "total_likes": 0,
       "total_photos": 14,
       "total_collections": 0
+=======
+    "id": "3oNWY7MeTiw",
+    "created_at": "2017-12-09T21:47:08-05:00",
+    "updated_at": "2017-12-10T06:29:44-05:00",
+    "width": 2482,
+    "height": 1655,
+    "color": "#DDE3E1",
+    "description": null,
+    "urls": {
+      "raw": "https://images.unsplash.com/photo-1512873897628-eea05c840147",
+      "full": "https://images.unsplash.com/photo-1512873897628-eea05c840147?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=71ddcffca36ac1239be5dc716617638d",
+      "regular": "https://images.unsplash.com/photo-1512873897628-eea05c840147?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=dc2b1701bbca937ccd7f6c6eb5799ee1",
+      "small": "https://images.unsplash.com/photo-1512873897628-eea05c840147?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&s=e99c6de10fe24cefbdbeab05d436833a",
+      "thumb": "https://images.unsplash.com/photo-1512873897628-eea05c840147?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=a20b4df6f777dc025a032cedabc8bf26"
+    },
+    "categories": [],
+    "links": {
+      "self": "https://api.unsplash.com/photos/3oNWY7MeTiw",
+      "html": "https://unsplash.com/photos/3oNWY7MeTiw",
+      "download": "https://unsplash.com/photos/3oNWY7MeTiw/download",
+      "download_location": "https://api.unsplash.com/photos/3oNWY7MeTiw/download"
+    },
+    "liked_by_user": false,
+    "likes": 24,
+    "user": {
+      "id": "vyt2RadU_xA",
+      "updated_at": "2017-12-10T06:48:03-05:00",
+      "username": "joshcouch",
+      "name": "Josh Couch",
+      "first_name": "Josh",
+      "last_name": "Couch",
+      "twitter_username": "itscouch",
+      "portfolio_url": null,
+      "bio": "Digital Designer with a love for cats and pizza. Based in Leeds, UK. ",
+      "location": null,
+      "links": {
+        "self": "https://api.unsplash.com/users/joshcouch",
+        "html": "https://unsplash.com/@joshcouch",
+        "photos": "https://api.unsplash.com/users/joshcouch/photos",
+        "likes": "https://api.unsplash.com/users/joshcouch/likes",
+        "portfolio": "https://api.unsplash.com/users/joshcouch/portfolio",
+        "following": "https://api.unsplash.com/users/joshcouch/following",
+        "followers": "https://api.unsplash.com/users/joshcouch/followers"
+      },
+      "profile_image": {
+        "small": "https://images.unsplash.com/profile-1495143406848-ae5fedcb9714?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32&s=9a26f29d6784aa6cf94e3bb5df35ee07",
+        "medium": "https://images.unsplash.com/profile-1495143406848-ae5fedcb9714?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64&s=021170bba9025f4f31ecc12f2d9aa4c1",
+        "large": "https://images.unsplash.com/profile-1495143406848-ae5fedcb9714?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=1f316715e31b223893ee6fc7e04b7367"
+      },
+      "total_likes": 0,
+      "total_photos": 22,
+      "total_collections": 1
+>>>>>>> migrate_to_kotlin
     },
     "current_user_collections": []
   },
   {
+<<<<<<< HEAD
     "id": "UUJHEkWow6Y",
     "created_at": "2017-12-09T12:31:25-05:00",
     "updated_at": "2017-12-09T15:52:21-05:00",
@@ -491,10 +923,64 @@
       "total_likes": 7,
       "total_photos": 25,
       "total_collections": 0
+=======
+    "id": "D8em-Yzs4jY",
+    "created_at": "2017-12-09T18:54:54-05:00",
+    "updated_at": "2017-12-10T06:29:23-05:00",
+    "width": 2448,
+    "height": 3264,
+    "color": "#16100D",
+    "description": null,
+    "urls": {
+      "raw": "https://images.unsplash.com/photo-1512863652221-2eb7c8317b5b",
+      "full": "https://images.unsplash.com/photo-1512863652221-2eb7c8317b5b?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=4d90d7bc5e69987c80adae255f675079",
+      "regular": "https://images.unsplash.com/photo-1512863652221-2eb7c8317b5b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=172e9f8cc6e23710d3ba834335d4e124",
+      "small": "https://images.unsplash.com/photo-1512863652221-2eb7c8317b5b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&s=6684ecf4f344cb6b578949c4394b0b96",
+      "thumb": "https://images.unsplash.com/photo-1512863652221-2eb7c8317b5b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=772ba577141c7eda3c20f95894e853fa"
+    },
+    "categories": [],
+    "links": {
+      "self": "https://api.unsplash.com/photos/D8em-Yzs4jY",
+      "html": "https://unsplash.com/photos/D8em-Yzs4jY",
+      "download": "https://unsplash.com/photos/D8em-Yzs4jY/download",
+      "download_location": "https://api.unsplash.com/photos/D8em-Yzs4jY/download"
+    },
+    "liked_by_user": false,
+    "likes": 25,
+    "user": {
+      "id": "5iZ-n0WBIa0",
+      "updated_at": "2017-12-10T06:47:40-05:00",
+      "username": "sydshots",
+      "name": "Sydney Russakov",
+      "first_name": "Sydney",
+      "last_name": "Russakov",
+      "twitter_username": null,
+      "portfolio_url": null,
+      "bio": null,
+      "location": null,
+      "links": {
+        "self": "https://api.unsplash.com/users/sydshots",
+        "html": "https://unsplash.com/@sydshots",
+        "photos": "https://api.unsplash.com/users/sydshots/photos",
+        "likes": "https://api.unsplash.com/users/sydshots/likes",
+        "portfolio": "https://api.unsplash.com/users/sydshots/portfolio",
+        "following": "https://api.unsplash.com/users/sydshots/following",
+        "followers": "https://api.unsplash.com/users/sydshots/followers"
+      },
+      "profile_image": {
+        "small": "https://images.unsplash.com/profile-1496874359587-fafcd85188c8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32&s=0ec0708070093a4f36deeae55afd6757",
+        "medium": "https://images.unsplash.com/profile-1496874359587-fafcd85188c8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64&s=63a41ead58200c7be5c302696b22ade2",
+        "large": "https://images.unsplash.com/profile-1496874359587-fafcd85188c8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=4cc0ed43e533ba582d48d1e32c58e3f0"
+      },
+      "total_likes": 6,
+      "total_photos": 4,
+      "total_collections": 4
+>>>>>>> migrate_to_kotlin
     },
     "current_user_collections": []
   },
   {
+<<<<<<< HEAD
     "id": "7PFtrlle6hU",
     "created_at": "2017-12-09T09:40:12-05:00",
     "updated_at": "2017-12-09T15:50:23-05:00",
@@ -545,6 +1031,58 @@
       },
       "total_likes": 39,
       "total_photos": 14,
+=======
+    "id": "FcgxMCkjwEo",
+    "created_at": "2017-12-09T15:05:16-05:00",
+    "updated_at": "2017-12-10T06:28:45-05:00",
+    "width": 3000,
+    "height": 2000,
+    "color": "#E4E5E6",
+    "description": null,
+    "urls": {
+      "raw": "https://images.unsplash.com/photo-1512850071827-9242a6124c50",
+      "full": "https://images.unsplash.com/photo-1512850071827-9242a6124c50?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=766d821928256fa2ecabba921d0c8570",
+      "regular": "https://images.unsplash.com/photo-1512850071827-9242a6124c50?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=9eef1e78ad4884497fb9a9eb4360079a",
+      "small": "https://images.unsplash.com/photo-1512850071827-9242a6124c50?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&s=05c0fe7b32d1aa40d5d1321ba3164a48",
+      "thumb": "https://images.unsplash.com/photo-1512850071827-9242a6124c50?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=89dbf7006a46a8b5c45d9bf7a790ca3f"
+    },
+    "categories": [],
+    "links": {
+      "self": "https://api.unsplash.com/photos/FcgxMCkjwEo",
+      "html": "https://unsplash.com/photos/FcgxMCkjwEo",
+      "download": "https://unsplash.com/photos/FcgxMCkjwEo/download",
+      "download_location": "https://api.unsplash.com/photos/FcgxMCkjwEo/download"
+    },
+    "liked_by_user": false,
+    "likes": 10,
+    "user": {
+      "id": "pFI-5LnqpP0",
+      "updated_at": "2017-12-09T17:12:31-05:00",
+      "username": "alexischloe",
+      "name": "Alexis Chloe",
+      "first_name": "Alexis",
+      "last_name": "Chloe",
+      "twitter_username": null,
+      "portfolio_url": null,
+      "bio": "instagram: @alexischloem | aspiring photographer | Hope you enjoy my photos ",
+      "location": "Detroit, Michigan",
+      "links": {
+        "self": "https://api.unsplash.com/users/alexischloe",
+        "html": "https://unsplash.com/@alexischloe",
+        "photos": "https://api.unsplash.com/users/alexischloe/photos",
+        "likes": "https://api.unsplash.com/users/alexischloe/likes",
+        "portfolio": "https://api.unsplash.com/users/alexischloe/portfolio",
+        "following": "https://api.unsplash.com/users/alexischloe/following",
+        "followers": "https://api.unsplash.com/users/alexischloe/followers"
+      },
+      "profile_image": {
+        "small": "https://images.unsplash.com/profile-1510345917328-348e4ff53854?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32&s=02b03393dc4c0c45d62b84d174edf8e2",
+        "medium": "https://images.unsplash.com/profile-1510345917328-348e4ff53854?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64&s=de6cbbb2c0cb4dbdda1793dd69918c80",
+        "large": "https://images.unsplash.com/profile-1510345917328-348e4ff53854?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=20db656d44620b055631f3cf99344f9a"
+      },
+      "total_likes": 75,
+      "total_photos": 23,
+>>>>>>> migrate_to_kotlin
       "total_collections": 0
     },
     "current_user_collections": []

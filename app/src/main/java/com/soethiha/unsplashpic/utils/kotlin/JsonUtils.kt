@@ -25,7 +25,7 @@ class JsonUtils private constructor() {
     }
 
     @Throws(JSONException::class, IOException::class)
-    fun loadDummyData(context: Context, directory: String, fileName: String) : String {
+    fun loadDummyData(context: Context, directory: String, fileName: String): String {
         val fullFilePath = directory + "/" + fileName
         val buffer: ByteArray = readJsonFile(context, fullFilePath)
         return String(buffer, charset("UTF-8"))

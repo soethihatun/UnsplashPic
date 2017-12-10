@@ -39,7 +39,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         EventBus eventBus = EventBus.getDefault();
         if (!eventBus.isRegistered(this)) {
-        Log.d(UnsplashPicApp.TAG, "onStart: ");
+            Log.d(UnsplashPicApp.TAG, "onStart: ");
             eventBus.register(this);
         }
     }

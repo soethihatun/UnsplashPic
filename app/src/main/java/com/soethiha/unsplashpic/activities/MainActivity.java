@@ -83,17 +83,21 @@ public class MainActivity extends BaseActivity implements PhotoViewHolder.Contro
 
     @Override
     public void onTapPhoto(PhotoVO photo, ImageView ivPhoto) {
-        Toast.makeText(this, "Tapped", Toast.LENGTH_SHORT).show();
+        // Toast.makeText(this, "Tapped", Toast.LENGTH_SHORT).show();
     }
 
     @Subscribe
-    public void onEvent(DataEvent.PCDataLoadedEvent event) {
+    public void onEvent(DataEvent.PhotoDataLoadedEvent event) {
         String extraMessage = event.getExtraMessage();
         List<PhotoVO> newPhotoList = event.getPhotoList();
-        Toast.makeText(getApplicationContext(), extraMessage + " : " + newPhotoList.size(), Toast.LENGTH_SHORT).show();
-        mPhotoAdapter.setNewData(newPhotoList);
+        if (newPhotoList == null || newPhotoList.isEmpty()) {
+            Toast.makeText(getApplicationContext(), extraMessage, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getApplicationContext(), extraMessage + " : " + newPhotoList.size(), Toast.LENGTH_SHORT).show();
+            mPhotoAdapter.setNewData(newPhotoList);
 
-        // Stop loading
-        swipeRefreshLayout.setRefreshing(false);
+            // Stop loading
+            swipeRefreshLayout.setRefreshing(false);
+        }
     }
 }

@@ -12,12 +12,12 @@ import java.util.List;
  * @since 02/12/2017
  */
 public class DataEvent {
-    public static class PCDataLoadedEvent {
+    public static class PhotoDataLoadedEvent {
 
         private String extraMessage;
         private List<PhotoVO> photoList;
 
-        public PCDataLoadedEvent(String extraMessage, List<PhotoVO> photoList) {
+        public PhotoDataLoadedEvent(String extraMessage, List<PhotoVO> photoList) {
             this.extraMessage = extraMessage;
             this.photoList = photoList;
         }

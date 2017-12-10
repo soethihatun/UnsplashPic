@@ -47,6 +47,10 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoViewHolder> {
         return mPhotoList.size();
     }
 
+    /**
+     * Swap the photo list with new photo list and notify
+     * @param newPhotoList New Photo list from data source
+     */
     public void setNewData(List<PhotoVO> newPhotoList) {
         mPhotoList = newPhotoList;
         notifyDataSetChanged();

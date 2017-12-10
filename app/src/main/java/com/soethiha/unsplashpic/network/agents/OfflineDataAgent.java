@@ -1,7 +1,6 @@
 package com.soethiha.unsplashpic.network.agents;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -15,7 +14,6 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
 
-import static com.soethiha.unsplashpic.UnsplashPicApp.TAG;
 import static com.soethiha.unsplashpic.network.utils.NetworkConstants.OFFLINE_UNSPLASH_PHOTO_JSON_PATH;
 import static com.soethiha.unsplashpic.network.utils.NetworkConstants.PATH_DUMMY_DATA;
 
@@ -57,8 +55,6 @@ public class OfflineDataAgent implements UnsplashPicDataAgent {
                 // Notify error to model
                 PhotoModel.getObjInstance().notifyErrorInLoadingPhotos("Empty photo list");
             } else {
-                Log.d(TAG, "loadPhotos: size = " + photoList.size());
-
                 // Notify loaded Photos to model
                 PhotoModel.getObjInstance().notifyPhotosLoaded(photoList);
             }

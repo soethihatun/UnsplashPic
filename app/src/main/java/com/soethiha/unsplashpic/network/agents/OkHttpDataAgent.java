@@ -78,13 +78,11 @@ public class OkHttpDataAgent implements UnsplashPicDataAgent {
                 if (response.isSuccessful()) {
                     if (response.body() != null) {
                         String responseString = response.body().string();
-                        Log.d(TAG, "doInBackground: " + responseString);
 
                         // Convert the Json to Value Object Type
                         Type listType = new TypeToken<List<PhotoVO>>() {
                         }.getType();
-                        List<PhotoVO> photoList = new Gson().fromJson(responseString, listType);
-                        return photoList;
+                        return new Gson().fromJson(responseString, listType);
                     }
                 } else {
                     PhotoModel.getObjInstance().notifyErrorInLoadingPhotos(response.message());
@@ -100,7 +98,6 @@ public class OkHttpDataAgent implements UnsplashPicDataAgent {
         protected void onPostExecute(List<PhotoVO> photoList) {
             super.onPostExecute(photoList);
             if (photoList != null && photoList.size() > 0) {
-                Log.d(TAG, "onPostExecute: photoList.size() = " + photoList.size());
                 PhotoModel.getObjInstance().notifyPhotosLoaded(photoList);
             } else {
                 PhotoModel.getObjInstance().notifyErrorInLoadingPhotos("Empty Photo List");
